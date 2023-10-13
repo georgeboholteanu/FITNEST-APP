@@ -1,29 +1,30 @@
 import mysql from "mysql";
 import express from "express";
-import cors from "cors";
-import fs from "fs";
 import process from "process";
+import fs from "fs";
 
 const app = express();
-// app.use(cors());
-app.use(express.json());
 app.set("port", process.env.PORT || 3000);
 app.set("host", process.env.HOST || "0.0.0.0");
 
-const db = mysql.createConnection({
+const usersFilePath = "users.json";
+
+const dbConfig = {
 	host: "localhost",
 	user: "root",
 	password: "",
 	database: "mydb",
-});
+};
+const db = mysql.createConnection(dbConfig);
 
 const createTable = () => {
 	db.query(
 		`CREATE TABLE IF NOT EXISTS users (
 		id INT AUTO_INCREMENT not NULL PRIMARY KEY,
-		name VARCHAR(100),
-		surname VARCHAR(100),
-		email VARCHAR(100)
+		first_name VARCHAR(100),
+		last_name VARCHAR(100),
+		email VARCHAR(100),
+		password VARCHAR(100)
 	)`,
 		(err) => {
 			if (err) throw new Error(err);
@@ -33,8 +34,11 @@ const createTable = () => {
 };
 
 db.connect((err) => {
-	if (err) throw new Error(err);
-	console.log("Connected");
+	if (err) {
+		console.error("Error connecting to the MySQL database:", err);
+		return;
+	}
+	console.log("Connected to the MySQL database");
 	db.query("CREATE DATABASE IF NOT EXISTS mydb", (err) => {
 		if (err) throw new Error(err);
 		console.log("Database created/exists");
@@ -45,6 +49,9 @@ db.connect((err) => {
 	});
 });
 
+app.use(express.json());
+
+// GET EXISTING USERS
 app.get("/users", (req, res) => {
 	const sql_query = "SELECT * FROM users";
 	db.query(sql_query, (err, data) => {
@@ -53,15 +60,50 @@ app.get("/users", (req, res) => {
 	});
 });
 
-app.post("/users", (req, res) => {
+app.post("/insertUser", (req, res) => {
 	const sql_query =
-		"INSERT INTO users (`name`, `surname`, `email`) VALUES (?)";
-	const values = ["test name", "test surname", "test email"];
+		"INSERT INTO users (`first_name`, `last_name`, `email`, `password`) VALUES (?)";
+	const values = ["test name", "test surname", "test email", "test password"];
 
 	db.query(sql_query, [values], (err, data) => {
 		if (err) return res.json(err);
 		return res.json("User has been created");
 	});
+});
+
+// ADD ALL USERS FROM JSON
+app.post("/insert", async (req, res) => {
+	try {
+		// Read data from the JSON file
+		const jsonData = JSON.parse(fs.readFileSync("./users.json", "utf8"));
+		let users = [];
+
+		for (const user of jsonData) {
+			const { first_name, last_name, email, password } = user;
+			const query =
+				"INSERT INTO users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)";
+			const values = [first_name, last_name, email, password];
+
+			await new Promise((resolve, reject) => {
+				db.query(query, values, (err, result) => {
+					if (err) {
+						console.error("Error inserting data:", err);
+						reject(err);
+					} else {
+						console.log("Data inserted successfully");
+						users.push(values);
+						resolve(result);
+					}
+				});
+			});
+		}
+
+		db.commit();
+		res.json(users);
+	} catch (error) {
+		console.error("An error occurred:", error);
+		res.status(500).json({ error: "Internal server error" });
+	}
 });
 
 app.put("/users", (req, res) => {
