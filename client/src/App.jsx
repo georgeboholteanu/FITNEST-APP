@@ -1,19 +1,23 @@
-import './App.css'
 // import './index.css';
-import { useState } from 'react'
-import Header from './components/Header'
-import Login from './components/Login';
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
+import Login from "./components/Login";
+import UserProfile from "./components/UserProfile";
 
-function App() {  
+function App() {
+  const [user, setUser] = useState(null);
 
   return (
-    <>   
-      <div className="root">
-        {/* <Header /> */}
-        <Login/>
-      </div>
-    </>
-  )
+    <Router>      
+      <Routes>
+        <Route path="/userprofile" element={user ? <UserProfile user={user} /> : <Navigate to="/" />} />
+        <Route path="/" element={<Login setUser={setUser} />} />
+      </Routes>     
+    </Router>
+  );
 }
 
-export default App
+export default App;
