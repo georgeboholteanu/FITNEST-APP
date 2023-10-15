@@ -7,6 +7,12 @@ const UserX = db.define('user', {
     primaryKey: true,
     autoIncrement: true,
   },
+  first_name: {
+    type: DataTypes.STRING,
+  },
+  last_name: {
+    type: DataTypes.STRING,
+  },
   email: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -14,12 +20,6 @@ const UserX = db.define('user', {
   password: {
     type: DataTypes.STRING,
     allowNull: false,
-  },
-  first_name: {
-    type: DataTypes.STRING,
-  },
-  last_name: {
-    type: DataTypes.STRING,
   },
 }, {
   timestamps: false, // Disable timestamps

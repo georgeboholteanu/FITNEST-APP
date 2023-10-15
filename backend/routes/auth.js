@@ -15,7 +15,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ message: 'Authentication failed. User not found.' });
     }
 
-    // Implement your password comparison logic here, you might use a library like bcrypt
+    // Implement password comparison and encrypy with bcrypt
     const isPasswordValid = user.password === password;
 
     if (!isPasswordValid) {

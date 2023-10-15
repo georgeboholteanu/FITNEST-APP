@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 
 // Define routes
 app.use("/api/auth", authRoutes);
+// app.use("/api/register", usersRoutes);
 app.use("/api/users", usersRoutes);
 
 app.listen(port, host, (err) => {
