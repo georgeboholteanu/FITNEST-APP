@@ -1,6 +1,7 @@
 import express from "express";
 import UserX from "../models/UserX.js";
-
+import { Op } from "sequelize";
+import { Sequelize } from "sequelize";
 const router = express.Router();
 
 // Route to get all users
@@ -11,6 +12,23 @@ router.get("/", async (req, res) => {
 	} catch (error) {
 		console.error(error);
 		res.status(500).json({ message: "Internal server error" });
+	}
+});
+
+// Route to get users by REGEX
+router.get("/regex", async (req, res) => {
+	try {
+		const selectedUsers = await UserX.destroy({
+			where: {
+				email: {
+					[Op.regexp]: "jsnow",
+				},
+			},
+		});
+		res.status(200).json(selectedUsers);
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ message: "Failed to retrieve users by regex" });
 	}
 });
 
@@ -44,6 +62,26 @@ router.post("/register", async (req, res) => {
 			.json({ message: "User registered successfully", user: newUser });
 	} catch (error) {
 		return res.status(500).json({ error: "Registration failed" });
+	}
+});
+
+// Route to remove users in db by REGEX
+router.delete("/regex", async (req, res) => {
+	try {
+		const deletedUsers = await UserX.destroy({
+			where: {
+				email: {
+					[Op.regexp]: "jsnow",
+				},
+			},
+		});
+
+		res.status(200).json({
+			message: `Deleted ${deletedUsers} users matching the regex pattern`,
+		});
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ message: "Failed to delete users by regex" });
 	}
 });
 
