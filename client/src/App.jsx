@@ -1,8 +1,10 @@
 // import './index.css';
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
-import { Navigate } from "react-router-dom";
+// import { useState } from "react";
+// import { Navigate } from "react-router-dom";
+
+/* COMPONENTS */
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -10,7 +12,7 @@ import Register from "./pages/Register";
 import Account from "./pages/Account";
 
 function App() {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   return (
     <div className="App">

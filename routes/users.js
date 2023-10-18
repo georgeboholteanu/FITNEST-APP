@@ -1,7 +1,8 @@
 import express from "express";
 import UserX from "../models/UserX.js";
 import { Op } from "sequelize";
-import { Sequelize } from "sequelize";
+// import bcrypt from "bcrypt"
+
 const router = express.Router();
 
 // Route to get all users
@@ -85,4 +86,12 @@ router.delete("/regex", async (req, res) => {
 	}
 });
 
+
+// Route to create/reset database - for testing purposes
+router.post("/reset", async (req, res) => {
+
+})
+
+
 export default router;
+
