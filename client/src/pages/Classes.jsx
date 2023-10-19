@@ -15,7 +15,7 @@ const Classes = () => {
 
 	return (
 		<div>
-			<h2 className="p-5 text-xl">Classes</h2>
+			<h2 className="titleClasses p-5 font-extrabold">Our Classes</h2>
 			<CardList cardData={cardData} />
 		</div>
 	);

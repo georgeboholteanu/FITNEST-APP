@@ -1,12 +1,10 @@
-# GYM CLASSES - MERN App with Authentification and Booking System
+# GYM CLASSES - App with Authentification and Booking System
 
 ## Description
 
 The app lets you login into your account or create a new account. Within your account, you are able to book specific gym classes and check their availability.
 
-Sequelize library provides an ORM (Object-Relational-Mapper) for Node.js
-
-**Sequalize** has been used to interact with MySQL database. This can be viewed or changed through **MySQL Workbench** on your local machine. A sample database will be created when launching the server first time.
+**Sequelize** library provides an ORM (Object-Relational-Mapper) for Node.js and has been used to interact with MySQL database. This can be viewed or changed through **MySQL Workbench** on your local machine. 
 
 ## Installation
 
@@ -31,7 +29,7 @@ npm run client
 
 ## Instructions to create the database
 
-You will need to have the MySQL server installed and running.
+A sample database can be created when launching the server, but you will need to have the MySQL server installed and running.
 
 Please ensure that you update the **sequelize** variable in both the **recreate-database.js** and **UserX.js** files with the correct configuration settings to connect to your MySQL server. Make sure to match the username and password values to your MySQL login credentials.
 

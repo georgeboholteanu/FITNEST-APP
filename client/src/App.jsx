@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Account from "./pages/Account";
 import Classes from "./pages/Classes";
 
 function App() {

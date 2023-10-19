@@ -25,7 +25,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 				<div className="mt-6 mb-2 group inline-flex flex-wrap items-center gap-3">
 					<span
 						data-tooltip-target="wifi"
-						className="cursor-pointer rounded-full border border-pink-500/5 bg-pink-500/5 p-3 text-pink-500 transition-colors hover:border-pink-500/10 hover:bg-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
+						className="cursor-pointer rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 
 					<span
 						data-tooltip-target="bedrooms"
-						className="cursor-pointer rounded-full border border-pink-500/5 bg-pink-500/5 p-3 text-pink-500 transition-colors hover:border-pink-500/10 hover:bg-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
+						className="cursor-pointer rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 
 					<span
 						data-tooltip-target="fire"
-						className="cursor-pointer rounded-full border border-pink-500/5 bg-pink-500/5 p-3 text-pink-500 transition-colors hover:border-pink-500/10 hover:bg-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
+						className="cursor-pointer rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 					</span>
 					<span
 						data-tooltip-target="more"
-						className="cursor-pointer rounded-full border border-pink-500/5 bg-pink-500/5 p-3 text-pink-500 transition-colors hover:border-pink-500/10 hover:bg-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
+						className="cursor-pointer rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"
 					>
 						+10
 					</span>
@@ -88,7 +88,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 			{/* button */}
 			<div className="p-6 pt-3 align-bottom flex-grow justify-end">
 				<button
-					className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+					className="block w-full select-none rounded-lg bg-violet-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-violet-500/20 transition-all hover:shadow-lg hover:shadow-violet-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
 					type="button"
 					data-ripple-light="true"
 				>

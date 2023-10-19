@@ -18,7 +18,12 @@ const Register = () => {
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify({ first_name, last_name, email, password }),
+					body: JSON.stringify({
+						first_name,
+						last_name,
+						email,
+						password,
+					}),
 				}
 			);
 
@@ -41,13 +46,15 @@ const Register = () => {
 	return (
 		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-lg">
-				<h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">
+				<h1 className="text-center text-2xl font-bold text-black sm:text-3xl">
 					Get started today
 				</h1>
 
-				<p className="mx-auto mt-4 max-w-md text-center text-gray-200">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Obcaecati sunt dolores deleniti inventore quaerat mollitia?
+				<p className="mx-auto mt-4 max-w-md text-center italic text-gray-200">
+					Our gym is equipped with the latest fitness equipment,
+					ensuring you have access to everything you need for a
+					successful workout. From cardio machines to strength
+					training equipment, we've got it all.
 				</p>
 
 				<form
@@ -57,7 +64,10 @@ const Register = () => {
 				>
 					<p className="text-center text-lg font-medium">
 						Create your account or{" "}
-						<NavLink to="/login" className="underline">
+						<NavLink
+							to="/login"
+							className="underline hover:text-yellow-500"
+						>
 							Login
 						</NavLink>
 					</p>
