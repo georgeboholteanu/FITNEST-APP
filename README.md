@@ -37,10 +37,10 @@ Please ensure that you update the **sequelize** variable in both the **recreate-
 
 In your database create a new schema for your application named **gym**.
 
-Running the following command in the terminal will create the sample table for you.  
+Running the following command in the terminal in the root folder will create the sample table for you.  
 
 ```bash
-cd database && node recereate-database.js
+cd database && node recreate-database
 ```
 
 ## API Testing Endpoints

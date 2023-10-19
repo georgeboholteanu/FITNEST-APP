@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Account from "./pages/Account";
+import Classes from "./pages/Classes";
 
 function App() {
   // const [user, setUser] = useState(null);
@@ -22,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} /> */
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/classes" element={<Classes />} />
           {/* <Route path="/userprofile" element={user ? <UserProfile user={user} /> : <Navigate to="/" />} /> */}
           {/* <Route path="/" element={<Login setUser={setUser} />} /> */}
         </Routes>     
