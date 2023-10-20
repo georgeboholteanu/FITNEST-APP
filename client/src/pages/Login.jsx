@@ -8,7 +8,7 @@ const Login = () => {
 	const [user, setUser] = useState(null);
 
 	const handleLogin = async (e) => {
-    e.preventDefault();
+		e.preventDefault();
 		try {
 			const response = await fetch(
 				"http://localhost:8000/api/auth/login",
@@ -44,13 +44,13 @@ const Login = () => {
 	return (
 		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-lg">
-				<h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">
-					Welcome to FitNest
+				<h1 className="text-center text-2xl font-bold sm:text-3xl">
+					Welcome to fitNEST
 				</h1>
 
 				<p className="mx-auto mt-4 max-w-md text-center text-gray-200">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Obcaecati sunt dolores deleniti inventore quaerat mollitia?
+					Welcome back! We're thrilled to see you again. Please enter
+					your credentials to access your account.
 				</p>
 
 				<form

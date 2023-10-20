@@ -1,5 +1,5 @@
-// import './index.css';
-import "./App.css";
+import './index.css';
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { useState } from "react";
 // import { Navigate } from "react-router-dom";
@@ -9,26 +9,33 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Classes from "./pages/Classes";
+import Footer from "./components/Footer";
+import Facilities from "./pages/Facilities";
+import OurTeam from "./pages/OurTeam";
+import Contact from "./pages/Contact";
 
 function App() {
-  // const [user, setUser] = useState(null);
+	// const [user, setUser] = useState(null);
 
-  return (
-    <div className="App">
-      <Router> 
-        <Navbar />     
-        <Routes>
-          <Route path="/" element={<Home />} /> */
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/classes" element={<Classes />} />
-          {/* <Route path="/userprofile" element={user ? <UserProfile user={user} /> : <Navigate to="/" />} /> */}
-          {/* <Route path="/" element={<Login setUser={setUser} />} /> */}
-        </Routes>     
-      </Router>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/facilities" element={<Facilities />} />
+					<Route path="/ourteam" element={<OurTeam />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="/register" element={<Register />} />
+
+					{/* <Route path="/userprofile" element={user ? <UserProfile user={user} /> : <Navigate to="/" />} /> */}
+					{/* <Route path="/" element={<Login setUser={setUser} />} /> */}
+				</Routes>
+				<Footer />
+			</Router>
+		</div>
+	);
 }
 
 export default App;

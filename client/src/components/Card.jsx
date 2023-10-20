@@ -2,15 +2,15 @@ import PropTypes from "prop-types";
 
 const Card = ({ title, description, imageSrc, imageAlt }) => {
 	return (
-		<div className="w-full flex flex-col max-w-[24rem] h-[500px] rounded-lg bg-white bg-clip-border text-gray-700 shadow-lg m-2 justify-between">
+		<div className="w-full flex flex-col rounded-lg bg-white bg-clip-border text-gray-700 shadow-lg">
 			{/* image */}
-			<div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+			<div className="relative object-cover rounded-t-lg text-center overflow-hidden bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
 				<img src={imageSrc} alt={imageAlt} />
 				<div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
 			</div>
 
 			{/* title, description and icons */}
-			<div className="p-2 flex-col items-center justify-center">
+			<div className="p-6 flex-col items-center justify-center">
 				{/* title */}
 				<div className="mb-3 ">
 					<h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
@@ -86,7 +86,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 			</div>
 
 			{/* button */}
-			<div className="p-6 pt-3 align-bottom flex-grow justify-end">
+			<div className="p-6">
 				<button
 					className="block w-full select-none rounded-lg bg-violet-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-violet-500/20 transition-all hover:shadow-lg hover:shadow-violet-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
 					type="button"

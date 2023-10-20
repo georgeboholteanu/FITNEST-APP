@@ -1,43 +1,55 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
-import "../index.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<header className="bg-white shadow-lg h-20 hidden lg:flex md:flex rounded-xl justify-between px-5">
+		<header className="w-screen bg-white shadow-lg h-20 hidden xl:flex lg:flex md:flex justify-between px-16">
 			{/* logo */}
 
-			<Link to="/" className="logo flex px-4 xl:px-6 py-2 xl:py-3">
-				<h1 className="text-yellow-500">fit</h1>
-				<h1 className="">NEST</h1>
+			<NavLink
+				to="/"
+				className="logo flex flex-col px-4 xl:px-6 py-1 xl:py-2 justify-center"
+			>
+				<div className="flex text-4xl">
+					<h1 className="text-yellow-500">fit</h1>
+					<h1 className="">NEST</h1>
+				</div>
+				{/* <div className=""> */}
+				<p className="motto">Your training partner</p>
+				{/* </div> */}
 				{/* <img className="" src="tb replaced" alt="" /> */}
-			</Link>
+			</NavLink>
 
 			{/* navbar desktop */}
 			<nav className="header-links contents font-semibold text-base lg:text-lg">
-				<ul className="flex items-center justify-center">
-					<li className="p-3 xl:p-6 active">
-						<a href="" className="hover:text-yellow-500">
+				<ul className="flex items-center justify-center pl-20">
+					<li className="p-3 xl:p-6">
+						<NavLink to="/" className="hover:text-yellow-500">
 							<span>Home</span>
-						</a>
+						</NavLink>
 					</li>
 					<li className="p-3 xl:p-6">
-						<Link
-							to="/classes"
+						<NavLink
+							to="/facilities"
 							className="hover:text-yellow-500"
 						>
-							<span>Classes</span>
-						</Link>
+							<span>Facilities</span>
+						</NavLink>
 					</li>
 					<li className="p-3 xl:p-6">
-						<a href="" className="hover:text-yellow-500">
+						<NavLink
+							to="/ourteam"
+							className="hover:text-yellow-500"
+						>
+							<span>Our Team</span>
+						</NavLink>
+					</li>
+					<li className="p-3 xl:p-6">
+						<NavLink
+							to="/contact"
+							className="hover:text-yellow-500"
+						>
 							<span>Contact</span>
-						</a>
-					</li>
-					<li className="p-3 xl:p-6">
-						<a href="" className="hover:text-yellow-500">
-							<span>Personal Training</span>
-						</a>
+						</NavLink>
 					</li>
 				</ul>
 			</nav>
@@ -141,7 +153,7 @@ const Navbar = () => {
 			</nav> */}
 
 			<div className="flex items-center px-4 lg:px-6 xl:px-8">
-				<Link
+				<NavLink
 					to="/login"
 					className="hover:text-yellow-500 pr-10 text-xl"
 				>
@@ -153,12 +165,12 @@ const Navbar = () => {
 					>
 						<path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h362.9c-5.4-9.4-8.6-20.3-8.6-32V352c0-2.1.1-4.2.3-6.3-31-26-71-41.7-114.6-41.7h-91.4zM528 240c17.7 0 32 14.3 32 32v48h-64v-48c0-17.7 14.3-32 32-32zm-80 32v48c-17.7 0-32 14.3-32 32v128c0 17.7 14.3 32 32 32h160c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32v-48c0-44.2-35.8-80-80-80s-80 35.8-80 80z" />
 					</svg>
-				</Link>
-				<Link to="/register">
+				</NavLink>
+				<NavLink to="/register">
 					<button className="bg-black hover:bg-yellow-500 text-white font-bold px-4 xl:px-6 py-2 xl:py-3 rounded-md">
 						Join Now
 					</button>
-				</Link>
+				</NavLink>
 			</div>
 		</header>
 	);
@@ -166,8 +178,6 @@ const Navbar = () => {
 
 export default Navbar;
 // 392f52
-
 // e5ca0b
-
 // 178278
 // 6da43c
