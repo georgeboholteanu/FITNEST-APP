@@ -1,7 +1,7 @@
 
 const Subscribe = () => {
 	return (
-		<div className="flex flex-col md:h-56 bg-white shadow-lg overflow-hidden md:flex-row my-10">
+		<div className="flex flex-col md:h-56 bg-white shadow-lg overflow-hidden md:flex-row">
 			<div className="md:flex items-center justify-center md:w-1/2 md:bg-gray-700">
 				<div className="py-6 px-20 md:py-0">
 					<h2 className="text-gray-700 text-2xl font-bold md:text-gray-100">

@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
 	return (
-		<footer className="pt-10">
+		<footer className="">
 			{/* footer body */}
-			<div className="bg-gray-800 text-gray-400 rounded-t-2xl px-10">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 lg:gap-10 md:px-5 lg:px-10">
+			<div className="bg-gray-800 text-gray-400">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:px-5 lg:px-10">
 					{/* logo */}
-					<div className="flex-1 py-4 md:px-2 lg:px-5">
+					<div className="flex-1 justify-center align-middle px-10 py-5">
 						<NavLink to="/" className="logo flex text-4xl">
 							<h1 className="text-yellow-500">fit</h1>
 							<h1 className="">NEST</h1>
@@ -23,25 +23,33 @@ const Footer = () => {
 						</p>
 					</div>
 
-					{/* services */}
-					<div className="flex-1 py-4 md:px-2 lg:px-20">
+					{/* facilities */}
+					<div className="flex-1 md:px-15 lg:px-15 py-5">	
 						<div className="text-left">
-							<h2 className="inline-block text-2xl border-b-4 border-blue-600">
-								Services
+							<h2 className="inline-block text-2xl border-b-4 border-blue-500">
+								Facilities
 							</h2>
 						</div>
-						<ul className="flex py-2 md:py-4 lg:py-4 justify-between">
+						<ul className="flex py-2 md:py-4 lg:py-4 md:justify-between">
 							<li className="">
 								<NavLink
-									to="/services"
+									to="/facilities"
+									className="hover:text-yellow-500"
+								>
+									<span>Events</span>
+								</NavLink>
+							</li>
+							<li className="md:px-2 lg:px-4">
+								<NavLink
+									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Nutrition</span>
 								</NavLink>
 							</li>
-							<li className="">
+							<li className="md:px-2 lg:px-4">
 								<NavLink
-									to="/services"
+									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Personal Training</span>
@@ -49,7 +57,7 @@ const Footer = () => {
 							</li>
 							<li className="">
 								<NavLink
-									to="/services"
+									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Classes</span>
@@ -59,10 +67,10 @@ const Footer = () => {
 					</div>
 
 					{/* social media */}
-					<div className="flex-1 py-4 md:px-2 lg:px-20">
+					<div className="flex-1 lg:px-10 py-5 lg:pl-28">
 						<div className="text-left">
-							<h2 className="inline-block text-2xl border-b-4 border-blue-600">
-								Social Media
+							<h2 className="inline-block text-2xl border-b-4 border-blue-500">
+								Follow Us
 							</h2>
 						</div>
 						<div className="flex py-4 text-2xl">

@@ -2,9 +2,9 @@
 const ContactDetails = () => {
 	return (
 		<div id="contact-section">
-			<div className="container flex flex-col mx-auto glass rounded-lg">
+			<div className="flex flex-col mx-auto glass">
 				<div className="w-full draggable ">
-					<div className="container flex flex-col items-center gap-16 mx-auto">
+					<div className="flex flex-col items-center gap-16 mx-auto">
 						<div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
 							<div className="flex flex-col items-center gap-3 px-8 py-10  shadow-main">
 								<span>

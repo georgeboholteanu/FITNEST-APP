@@ -2,22 +2,22 @@ import { NavLink } from "react-router-dom";
 
 const Hero = () => {
 	return (
-		<div className="hero min-h-screen flex items-center">
+		<div className="hero min-h-screen flex items-center relative">
 			<video
 				autoPlay
 				loop
 				muted
-				className="absolute inset-0 w-full h-full object-cover md:mt-36 lg:mt-36"
+				className="w-full h-full object-cover z-0"
 			>
 				<source
-					src="../public/assets/video/video (1080p).mp4"
+					src="assets/video/video (1080p).mp4"
 					type="video/mp4"
 				/>
 			</video>
 
-			<div className="container mx-auto text-left text-white relative px-5">
+			<div className="container absolute mx-5 lg:mx-20 text-left text-white px-5 z-10">
 				<div className="flex">
-					<h1 className="text-6xl font-medium mb-6 text-gray-300">
+					<h1 className="text-4xl lg:text-6xl font-medium mb-6 text-gray-300">
 						Welcome to{" "}
 						<div className="flex logo">
 							<h1 className="text-yellow-500">fit</h1>
@@ -25,11 +25,11 @@ const Hero = () => {
 						</div>
 					</h1>
 				</div>
-				<p className="text-xl">
+				<p className="text-md lg:text-xl">
 					Unleash Your Potential, Build a Healthier You, and Soar to
 					New Heights of Wellness.
 				</p>
-				<p className="text-xl mb-12">
+				<p className="text-md lg:text-xl mb-12">
 					Join Our Community Today and Let&apos;s Achieve Your Fitness
 					Goals Together!
 				</p>

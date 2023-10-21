@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<header className="w-screen bg-white shadow-lg h-20 hidden xl:flex lg:flex md:flex justify-between px-16">
+		<header className="w-screen shadow-lg h-20 hidden xl:flex lg:flex md:flex justify-between px-16">
 			{/* logo */}
 
 			<NavLink
