@@ -1,7 +1,7 @@
 import express from "express";
 import UserX from "../models/UserX.js";
 import { Op } from "sequelize";
-// import bcrypt from "bcrypt"
+import bcrypt from "bcrypt"
 
 const router = express.Router();
 
@@ -45,24 +45,26 @@ router.post("/register", async (req, res) => {
 	}
 
 	// Hash the user's password
-	// const hashedPassword = await bcrypt.hash(password, 10);
+	const hashedPassword = await bcrypt.hash(password, 10);
 
-	// Before creating the user, log the values
-	console.log("first_name:", first_name);
-	console.log("last_name:", last_name);
 	// Create a new user
 	try {
 		const newUser = await UserX.create({
 			first_name,
 			last_name,
 			email,
-			password,
+			password: hashedPassword, 
 		});
 		return res
 			.status(201)
 			.json({ message: "User registered successfully", user: newUser });
 	} catch (error) {
-		return res.status(500).json({ error: "Registration failed" });
+		console.error("User registration error:", error);
+		if (error.name === "SequelizeUniqueConstraintError") {
+			return res.status(400).json({ message: "Email already exists" });
+		} else {
+			return res.status(500).json({ message: "Registration failed" });
+		}
 	}
 });
 
@@ -86,12 +88,7 @@ router.delete("/regex", async (req, res) => {
 	}
 });
 
-
 // Route to create/reset database - for testing purposes
-router.post("/reset", async (req, res) => {
-
-})
-
+router.post("/reset", async (req, res) => {});
 
 export default router;
-

@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Register = () => {
 	const [first_name, setfirst_name] = useState("");
@@ -31,16 +34,17 @@ const Register = () => {
 				const result = await response.json();
 				setRegisterResult(result);
 				console.log(result.message);
-			} else if (response.status === 401) {
+			} else if (response.status === 400) {
 				// Handle 401 (Unauthorized) error
 				const errorData = await response.json();
-				console.error(errorData.message);
+				toast.error(errorData.message);
 			} else {
-				throw new Error("Registration failed");
+				throw toast.error("Registration failed");
 			}
-		} catch (error) {
-			console.error("Error during registration:", error);
+		} catch (err) {
+			toast.error(err?.data?.message || err.error);
 		}
+		
 	};
 
 	return (
