@@ -3,7 +3,7 @@ import Classes from '../components/Classes'
 
 const Facilities = () => {
   return (
-    <div id='facilities'>
+    <div>
         <Classes />
     </div>
   )

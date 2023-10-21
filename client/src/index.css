@@ -5,12 +5,10 @@
 
 body {
   margin: 0;
-  display: flex;
-  
+  display: flex;  
   min-width: 320px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
   justify-content: center;
   background-image: linear-gradient(to right top, #051937, #392f52, #008793, #178278, #6da43c);
 }

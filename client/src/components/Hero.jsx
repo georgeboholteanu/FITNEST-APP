@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
 	return (
@@ -33,12 +33,12 @@ const Hero = () => {
 					Join Our Community Today and Let&apos;s Achieve Your Fitness
 					Goals Together!
 				</p>
-				<NavLink
+				<Link
 					to="/register"
 					className="bg-gray-900 text-white py-4 px-12 rounded-full hover:bg-indigo-600"
 				>
 					Register today
-				</NavLink>
+				</Link>
 			</div>
 		</div>
 	);

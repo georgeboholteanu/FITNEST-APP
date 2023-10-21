@@ -1,11 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [loginResult, setLoginResult] = useState(null);
 	const [user, setUser] = useState(null);
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
+	const navigate = useNavigate();
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -26,31 +30,40 @@ const Login = () => {
 				setLoginResult(result);
 				console.log(result.message);
 
+				// Redirect to the Dashboard page if login is successful
+				setIsLoggedIn(!isLoggedIn);
+				navigate("/dashboard"); // Redirect to the Dashboard route
+
 				// Store the user information in your application state
 				setUser(result.user);
-				console.log(result.user);
+				console.log(isLoggedIn);
+				toast.error("Login successful"); // for testing purposes
 			} else if (response.status === 401) {
 				// Handle 401 (Unauthorized) error
 				const errorData = await response.json();
-				console.error(errorData.message);
+				toast.error(errorData.message);
 			} else {
-				throw new Error("Login failed");
+				throw toast.error("Login failed");
 			}
-		} catch (error) {
-			console.error("Error during login:", error);
+		} catch (err) {
+			toast.error(err?.data?.message || err.error);
 		}
 	};
 
 	return (
-		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+		<div className="mx-auto max-w-screen-xl min-h-screen px-4 py-16 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-lg">
-				<h1 className="text-center text-2xl font-bold sm:text-3xl">
-					Welcome to fitNEST
+				<h1 className="flex-inline text-center text-2xl font-bold sm:text-3xl">
+					Welcome to{" "}
 				</h1>
+				<div className="logo flex justify-center text-4xl">
+					<h1 className="text-yellow-500 ">fit</h1>
+					<h1 className="">NEST</h1>
+				</div>
 
 				<p className="mx-auto mt-4 max-w-md text-center text-gray-200">
-					Welcome back! We're thrilled to see you again. Please enter
-					your credentials to access your account.
+					Welcome back! We&apos;re thrilled to see you again. Please
+					enter your credentials to access your account.
 				</p>
 
 				<form
@@ -63,9 +76,7 @@ const Login = () => {
 					</p>
 
 					<div>
-						<label htmlFor="email" className="sr-only">
-							Email
-						</label>
+						<label className="sr-only">Email</label>
 
 						<div className="relative">
 							<input
@@ -96,9 +107,7 @@ const Login = () => {
 					</div>
 
 					<div>
-						<label htmlFor="password" className="sr-only">
-							Password
-						</label>
+						<label className="sr-only">Password</label>
 
 						<div className="relative">
 							<input
@@ -137,24 +146,16 @@ const Login = () => {
 						type="submit"
 						className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
 					>
+						{/* <Link to="/"> */}
 						Sign in
+						{/* </Link> */}
 					</button>
 					<p className="text-center text-sm text-gray-200 ">
 						No account?{" "}
-						<NavLink to="/register" className="underline">
+						<Link to="/register" className="underline">
 							Register
-						</NavLink>
+						</Link>
 					</p>
-					{loginResult && (
-						<div>
-							<h2>Login Result</h2>
-							{loginResult.error ? (
-								<p>{loginResult.error}</p>
-							) : (
-								<p>Logging in: {user.email}</p>
-							)}
-						</div>
-					)}
 				</form>
 			</div>
 		</div>

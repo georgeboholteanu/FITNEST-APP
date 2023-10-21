@@ -1,5 +1,5 @@
 import CardList from "./CardList";
-import classesData from "../utils/classes.json";
+import classesData from "../data/classes.json";
 
 const Classes = () => {
 	const cardData = classesData.map(
@@ -13,7 +13,7 @@ const Classes = () => {
 	);
 
 	return (
-		<div id="classes-section" className="text-center md:px-10 lg:px-48">
+		<div id="classes-section" className="text-center md:px-10 lg:px-48 pb-10">
 			<h2 className="titleClasses py-5 font-extrabold text-4xl">Classes</h2>
 			<CardList cardData={cardData} />
 		</div>

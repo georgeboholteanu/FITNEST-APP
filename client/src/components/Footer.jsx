@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
@@ -8,10 +8,10 @@ const Footer = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:px-5 lg:px-10">
 					{/* logo */}
 					<div className="flex-1 justify-center align-middle px-10 py-5">
-						<NavLink to="/" className="logo flex text-4xl">
+						<Link to="/" className="logo flex text-4xl">
 							<h1 className="text-yellow-500">fit</h1>
 							<h1 className="">NEST</h1>
-						</NavLink>
+						</Link>
 						<p
 							className="py-2 text-gray-300 text-sm"
 							id="footerParagraph"
@@ -32,36 +32,36 @@ const Footer = () => {
 						</div>
 						<ul className="flex py-2 md:py-4 lg:py-4 md:justify-between">
 							<li className="">
-								<NavLink
+								<Link
 									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Events</span>
-								</NavLink>
+								</Link>
 							</li>
 							<li className="md:px-2 lg:px-4">
-								<NavLink
+								<Link
 									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Nutrition</span>
-								</NavLink>
+								</Link>
 							</li>
 							<li className="md:px-2 lg:px-4">
-								<NavLink
+								<Link
 									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Personal Training</span>
-								</NavLink>
+								</Link>
 							</li>
 							<li className="">
-								<NavLink
+								<Link
 									to="/facilities"
 									className="hover:text-yellow-500"
 								>
 									<span>Classes</span>
-								</NavLink>
+								</Link>
 							</li>
 						</ul>
 					</div>

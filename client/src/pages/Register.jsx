@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 	const [first_name, setfirst_name] = useState("");
@@ -44,7 +44,7 @@ const Register = () => {
 	};
 
 	return (
-		<div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+		<div className="mx-auto max-w-screen-xl min-h-screen px-4 py-16 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-lg">
 				<h1 className="text-center text-2xl font-bold text-black sm:text-3xl">
 					Get started today
@@ -64,12 +64,12 @@ const Register = () => {
 				>
 					<p className="text-center text-lg font-medium">
 						Create your account or{" "}
-						<NavLink
+						<Link
 							to="/login"
 							className="underline hover:text-yellow-500"
 						>
 							Login
-						</NavLink>
+						</Link>
 					</p>
 
 					<div>
@@ -210,9 +210,11 @@ const Register = () => {
 
 					<button
 						type="submit"
-						className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+						className="block w-full rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-3 text-sm font-medium text-white"
 					>
-						Register
+						<Link className="" to="/">
+							Register
+						</Link>
 					</button>
 				</form>
 			</div>
