@@ -1,8 +1,13 @@
-# GYM CLASSES - App with Authentification and Booking System
+# App with Authentification Using Sequalize
+
+![REACT](https://img.shields.io/badge/REACT-A786222?style=for-the-badge&logoColor=white)
+
+
+![Desktop Preview](./client/src/assets/appDesktopPreview.jpg)
 
 ## Description
 
-The app lets you login into your account or create a new account. Within your account, you are able to book specific gym classes and check their availability.
+The app lets you create a new account or login into an existing one. Within your account, you are able to book specific gym classes and check their availability.
 
 **Sequelize** library provides an ORM (Object-Relational-Mapper) for Node.js and has been used to interact with MySQL database. This can be viewed or changed through **MySQL Workbench** on your local machine. 
 
@@ -38,7 +43,7 @@ In your database create a new schema for your application named **gym**.
 Running the following command in the terminal in the root folder will create the sample table for you.  
 
 ```bash
-cd database && node recreate-database
+cd database && node createSampleDB
 ```
 
 ## API Testing Endpoints
