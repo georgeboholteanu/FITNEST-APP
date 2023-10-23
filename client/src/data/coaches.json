@@ -1,98 +1,98 @@
 [
-	{
-		"name": "Alice Watson",
-		"description": "Passionate fitness enthusiast",
-		"class_name": "High-Intensity Interval Training",
-		"specialization": "Specialized in maximizing calorie burn with intense workouts.",
-		"imageSrc": "/assets/images/coaches/coach_7.jpg",
-		"imageAlt": "image alt1"
-	},
-	{
-		"name": "Bob Rupper",
-		"description": "Yoga guru with a focus on tranquility",
-		"class_name": "Yoga Flow Serenity",
-		"specialization": "Helps you find inner calm and physical balance.",
-		"imageSrc": "/assets/images/coaches/coach_14.jpg",
-		"imageAlt": "image alt2"
-	},
-	{
-		"name": "Charlie Swift",
-		"description": "Strength and sculpt expert",
-		"class_name": "Strength and Sculpt",
-		"specialization": "Builds lean muscle and body tone with a focus on endurance.",
-		"imageSrc": "/assets/images/coaches/coach_3.jpg",
-		"imageAlt": "image alt3"
-	},
-	{
-		"name": "Don Moore",
-		"description": "Cycling enthusiast and cardio king",
-		"class_name": "Cycling Revolution",
-		"specialization": "Improves cardiovascular fitness and endurance through cycling.",
-		"imageSrc": "/assets/images/coaches/coach_12.jpg",
-		"imageAlt": "image alt4"
-	},
-	{
-		"name": "Erica Boyle",
-		"description": "Pilates expert with a core focus",
-		"class_name": "Pilates Core Fusion",
-		"specialization": "Enhances stability and core strength through Pilates fusion.",
-		"imageSrc": "/assets/images/coaches/coach_1.jpg",
-		"imageAlt": "image alt5"
-	},
-	{
-		"name": "Fiona Rider",
-		"description": "Zumba enthusiast and dance diva",
-		"class_name": "Zumba Party Groove",
-		"specialization": "Delivers high-energy workouts through Latin and international dance.",
-		"imageSrc": "/assets/images/coaches/coach_18.jpg",
-		"imageAlt": "image alt6"
-	},
-	{
-		"name": "George Watson",
-		"description": "Passionate fitness enthusiast",
-		"class_name": "High-Intensity Interval Training",
-		"specialization": "Specialized in maximizing calorie burn with intense workouts.",
-		"imageSrc": "/assets/images/coaches/coach_15.jpg",
-		"imageAlt": "image alt1"
-	},
-	{
-		"name": "Hannah Instructor",
-		"description": "Yoga guru with a focus on tranquility",
-		"class_name": "Yoga Flow Serenity",
-		"specialization": "Helps you find inner calm and physical balance.",
-		"imageSrc": "/assets/images/coaches/coach_10.jpg",
-		"imageAlt": "image alt2"
-	},
-	{
-		"name": "Ian Coach",
-		"description": "Strength and sculpt expert",
-		"class_name": "Strength and Sculpt",
-		"specialization": "Builds lean muscle and body tone with a focus on endurance.",
-		"imageSrc": "/assets/images/coaches/coach_9.jpg",
-		"imageAlt": "image alt3"
-	},
-	{
-		"name": "Jenny Croyer",
-		"description": "Cycling enthusiast and cardio king",
-		"class_name": "Cycling Revolution",
-		"specialization": "Improves cardiovascular fitness and endurance through cycling.",
-		"imageSrc": "/assets/images/coaches/coach_10.jpg",
-		"imageAlt": "image alt4"
-	},
-	{
-		"name": "Kevin Yong",
-		"description": "Pilates expert with a core focus",
-		"class_name": "Pilates Core Fusion",
-		"specialization": "Enhances stability and core strength through Pilates fusion.",
-		"imageSrc": "/assets/images/coaches/coach_11.jpg",
-		"imageAlt": "image alt5"
-	},
-	{
-		"name": "Laura Dancer",
-		"description": "Zumba enthusiast and dance diva",
-		"class_name": "Zumba Party Groove",
-		"specialization": "Delivers high-energy workouts through Latin and international dance.",
-		"imageSrc": "/assets/images/coaches/coach_12.jpg",
-		"imageAlt": "image alt6"
-	}
+  {
+    "name": "Alice Watson",
+    "description": "Passionate fitness enthusiast",
+    "class_name": "High-Intensity Interval Training",
+    "specialization": "Specialized in maximizing calorie burn with intense workouts.",
+    "imageSrc": "/assets/images/coaches/coach_7.jpg",
+    "imageAlt": "image alt1"
+  },
+  {
+    "name": "Bob Rupper",
+    "description": "Yoga guru with a focus on tranquility",
+    "class_name": "Yoga Flow Serenity",
+    "specialization": "Helps you find inner calm and physical balance.",
+    "imageSrc": "/assets/images/coaches/coach_14.jpg",
+    "imageAlt": "image alt2"
+  },
+  {
+    "name": "Charlie Swift",
+    "description": "Strength and sculpt expert",
+    "class_name": "Strength and Sculpt",
+    "specialization": "Builds lean muscle and body tone with a focus on endurance.",
+    "imageSrc": "/assets/images/coaches/coach_3.jpg",
+    "imageAlt": "image alt3"
+  },
+  {
+    "name": "Don Moore",
+    "description": "Cycling enthusiast and cardio king",
+    "class_name": "Cycling Revolution",
+    "specialization": "Improves cardiovascular fitness and endurance through cycling.",
+    "imageSrc": "/assets/images/coaches/coach_12.jpg",
+    "imageAlt": "image alt4"
+  },
+  {
+    "name": "Erica Boyle",
+    "description": "Pilates expert with a core focus",
+    "class_name": "Pilates Core Fusion",
+    "specialization": "Enhances stability and core strength through Pilates fusion.",
+    "imageSrc": "/assets/images/coaches/coach_1.jpg",
+    "imageAlt": "image alt5"
+  },
+  {
+    "name": "Fiona Rider",
+    "description": "Zumba enthusiast and dance diva",
+    "class_name": "Zumba Party Groove",
+    "specialization": "Delivers high-energy workouts through Latin and international dance.",
+    "imageSrc": "/assets/images/coaches/coach_18.jpg",
+    "imageAlt": "image alt6"
+  },
+  {
+    "name": "George Watson",
+    "description": "Passionate fitness enthusiast",
+    "class_name": "High-Intensity Interval Training",
+    "specialization": "Specialized in maximizing calorie burn with intense workouts.",
+    "imageSrc": "/assets/images/coaches/coach_15.jpg",
+    "imageAlt": "image alt1"
+  },
+  {
+    "name": "Hannah Instructor",
+    "description": "Yoga guru with a focus on tranquility",
+    "class_name": "Yoga Flow Serenity",
+    "specialization": "Helps you find inner calm and physical balance.",
+    "imageSrc": "/assets/images/coaches/coach_10.jpg",
+    "imageAlt": "image alt2"
+  },
+  {
+    "name": "Ian Coach",
+    "description": "Strength and sculpt expert",
+    "class_name": "Strength and Sculpt",
+    "specialization": "Builds lean muscle and body tone with a focus on endurance.",
+    "imageSrc": "/assets/images/coaches/coach_9.jpg",
+    "imageAlt": "image alt3"
+  },
+  {
+    "name": "Jenny Croyer",
+    "description": "Cycling enthusiast and cardio king",
+    "class_name": "Cycling Revolution",
+    "specialization": "Improves cardiovascular fitness and endurance through cycling.",
+    "imageSrc": "/assets/images/coaches/coach_10.jpg",
+    "imageAlt": "image alt4"
+  },
+  {
+    "name": "Kevin Yong",
+    "description": "Pilates expert with a core focus",
+    "class_name": "Pilates Core Fusion",
+    "specialization": "Enhances stability and core strength through Pilates fusion.",
+    "imageSrc": "/assets/images/coaches/coach_11.jpg",
+    "imageAlt": "image alt5"
+  },
+  {
+    "name": "Laura Dancer",
+    "description": "Zumba enthusiast and dance diva",
+    "class_name": "Zumba Party Groove",
+    "specialization": "Delivers high-energy workouts through Latin and international dance.",
+    "imageSrc": "/assets/images/coaches/coach_12.jpg",
+    "imageAlt": "image alt6"
+  }
 ]

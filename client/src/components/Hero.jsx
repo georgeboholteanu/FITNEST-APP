@@ -28,7 +28,7 @@ const Hero = () => {
 				</p>
 				<Link
 					to="/register"
-					className="bg-indigo-600 text-white py-4 px-12 rounded-full hover:bg-indigo-800 font-bold"
+					className="bg-blue-500 text-white py-4 px-12 rounded-full hover:bg-blue-800 font-bold"
 				>
 					Register today
 				</Link>

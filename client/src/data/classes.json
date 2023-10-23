@@ -1,38 +1,38 @@
 [
-	{
-		"title": "High-Intensity Interval Training (HIIT)",
-		"description": "A heart-pounding, fat-burning class that alternates between short bursts of intense exercise, maximizing your calorie burn in minimal time.",
-		"imageSrc": "/assets/images/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg",
-		"imageAlt": "image alt1"
-	},
-	{
-		"title": "Yoga Flow Serenity",
-		"description": "Find your inner calm and flexibility in this class that combines gentle yoga poses with a fluid flow, helping you achieve mental tranquility and physical balance.",
-		"imageSrc": "/assets/images/classes/dylan-gillis-YJdCZba0TYE-unsplash.jpg",
-		"imageAlt": "image alt2"
-	},
-	{
-		"title": "Strength and Sculpt",
-		"description": "Build lean muscle and tone your body through a mix of weightlifting and bodyweight exercises, focusing on endurance and power.",
-		"imageSrc": "/assets/images/classes/ambitious-studio-rick-barrett-g_bglWB48JA-unsplash.jpg",
-		"imageAlt": "image alt3"
-	},
-	{
-		"title": "Cycling Revolution",
-		"description": "Take a journey on the stationary bike through virtual terrains, challenging your endurance and improving cardiovascular fitness in a fun and energizing way.",
-		"imageSrc": "/assets/images/classes/trust-tru-katsande-A_ftsTh53lM-unsplash.jpg",
-		"imageAlt": "image alt4"
-	},
-	{
-		"title": "Pilates Core Fusion",
-		"description": "Strengthen your core and improve posture with a fusion of Pilates and functional fitness exercises, designed to enhance stability and body strength.",
-		"imageSrc": "/assets/images/classes/bruce-mars-gJtDg6WfMlQ-unsplash.jpg",
-		"imageAlt": "image alt5"
-	},
-	{
-		"title": "Zumba Party Groove",
-		"description": "Shake, shimmy, and dance your way to fitness in this lively and rhythmic class, which blends Latin and international music for a fun, high-energy workout.",
-		"imageSrc": "/assets/images/classes/geert-pieters-3RnkZpDqsEI-unsplash.jpg",
-		"imageAlt": "image alt6"
-	}
+  {
+    "title": "High-Intensity Interval Training",
+    "description": "A heart-pounding, fat-burning class that alternates between short bursts of intense exercise, maximizing your calorie burn in minimal time.",
+    "imageSrc": "/assets/images/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg",
+    "imageAlt": "image alt1"
+  },
+  {
+    "title": "Yoga Flow Serenity",
+    "description": "Find your inner calm and flexibility in this class that combines gentle yoga poses with a fluid flow, helping you achieve mental tranquility and physical balance.",
+    "imageSrc": "/assets/images/classes/dylan-gillis-YJdCZba0TYE-unsplash.jpg",
+    "imageAlt": "image alt2"
+  },
+  {
+    "title": "Strength and Sculpt",
+    "description": "Build lean muscle and tone your body through a mix of weightlifting and bodyweight exercises, focusing on endurance and power.",
+    "imageSrc": "/assets/images/classes/ambitious-studio-rick-barrett-g_bglWB48JA-unsplash.jpg",
+    "imageAlt": "image alt3"
+  },
+  {
+    "title": "Cycling Revolution",
+    "description": "Take a journey on the stationary bike through virtual terrains, challenging your endurance and improving cardiovascular fitness in a fun and energizing way.",
+    "imageSrc": "/assets/images/classes/trust-tru-katsande-A_ftsTh53lM-unsplash.jpg",
+    "imageAlt": "image alt4"
+  },
+  {
+    "title": "Pilates Core Fusion",
+    "description": "Strengthen your core and improve posture with a fusion of Pilates and functional fitness exercises, designed to enhance stability and body strength.",
+    "imageSrc": "/assets/images/classes/bruce-mars-gJtDg6WfMlQ-unsplash.jpg",
+    "imageAlt": "image alt5"
+  },
+  {
+    "title": "Zumba Party Groove",
+    "description": "Shake, shimmy, and dance your way to fitness in this lively and rhythmic class, which blends Latin and international music for a fun, high-energy workout.",
+    "imageSrc": "/assets/images/classes/geert-pieters-3RnkZpDqsEI-unsplash.jpg",
+    "imageAlt": "image alt6"
+  }
 ]
