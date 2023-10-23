@@ -2,20 +2,13 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
 	return (
-		<div className="hero min-h-screen flex items-center relative">
-			<video
-				autoPlay
-				loop
-				muted
-				className="w-full h-full object-cover z-0"
-			>
-				<source
-					src="assets/video/video (1080p).mp4"
-					type="video/mp4"
-				/>
+		<div className="hero min-h-[400px] flex items-center relative">
+			{/* video */}
+			<video autoPlay loop muted className="h-[500px] md:h-full lg:h-full w-full object-cover">
+				<source src="assets/video/video (1080p).mp4" type="video/mp4" />
 			</video>
-
-			<div className="container absolute mx-5 lg:mx-20 text-left text-white px-5 z-10">
+			{/* hero + CTA */}
+			<div className="absolute mx-5 lg:mx-20 text-left text-white px-5">
 				<div className="flex">
 					<h1 className="text-4xl lg:text-6xl font-medium mb-6 text-gray-300">
 						Welcome to{" "}
@@ -35,7 +28,7 @@ const Hero = () => {
 				</p>
 				<Link
 					to="/register"
-					className="bg-gray-900 text-white py-4 px-12 rounded-full hover:bg-indigo-600"
+					className="bg-indigo-600 text-white py-4 px-12 rounded-full hover:bg-indigo-800 font-bold"
 				>
 					Register today
 				</Link>

@@ -1,12 +1,11 @@
-
-import Classes from '../components/Classes'
+import Classes from "../components/Classes/Classes";
 
 const Facilities = () => {
-  return (
-    <div>
-        <Classes />
-    </div>
-  )
-}
+	return (
+		<div>
+			<Classes />
+		</div>
+	);
+};
 
-export default Facilities
+export default Facilities;

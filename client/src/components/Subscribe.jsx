@@ -1,9 +1,9 @@
 
 const Subscribe = () => {
 	return (
-		<div className="flex flex-col md:h-56 bg-white shadow-lg overflow-hidden md:flex-row">
-			<div className="md:flex items-center justify-center md:w-1/2 md:bg-gray-700">
-				<div className="py-6 px-20 md:py-0">
+		<div className="flex flex-col md:flex-row w-full md:h-56 bg-white shadow-lg overflow-hidden  ">
+			<div className="md:flex items-center justify-center md:w-1/2 md:bg-gray-700 lg:px-5">
+				<div className="py-6 px-8 lg:px-10 md:py-0 text-center">
 					<h2 className="text-gray-700 text-2xl font-bold md:text-gray-100">
 						Sign Up For Our Events
 					</h2>
@@ -19,12 +19,12 @@ const Subscribe = () => {
 				<form>
 					<div className="flex flex-col rounded-lg overflow-hidden sm:flex-row ">
 						<input
-							className="py-3 px-4 bg-gray-200 text-gray-800 border-gray-300 border-2 outline-none placeholder-gray-500 focus:bg-gray-100"
+							className="py-3 px-10 text-center bg-gray-200 text-gray-800 border-gray-300 border-2 outline-none placeholder-gray-500 focus:bg-gray-100"
 							type="text"
 							name="email"
 							placeholder="Enter your email"
 						/>
-						<button className="py-3 px-4 bg-gray-700 text-gray-100 font-semibold uppercase hover:bg-gray-600">
+						<button className="py-3 px-10 bg-gray-700 text-gray-100 font-semibold uppercase hover:bg-gray-600">
 							subscribe
 						</button>
 					</div>

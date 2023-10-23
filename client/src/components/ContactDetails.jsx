@@ -3,10 +3,10 @@ const ContactDetails = () => {
 	return (
 		<div id="contact-section">
 			<div className="flex flex-col mx-auto glass">
-				<div className="w-full draggable ">
-					<div className="flex flex-col items-center gap-16 mx-auto">
-						<div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
-							<div className="flex flex-col items-center gap-3 px-8 py-10  shadow-main">
+				<div className="w-full">
+					<div className="flex flex-col items-center  mx-auto">
+						<div className="grid w-full grid-cols-1 py-5 md:grid-cols-3 lg:grid-cols-3 ">
+							<div className="flex flex-col items-center px-8 py-5 lg:py-10  shadow-main">
 								<span>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const ContactDetails = () => {
 									hello@fitnest.com
 								</a>
 							</div>
-							<div className="flex flex-col items-center gap-3 px-8 py-10 shadow-main">
+							<div className="flex flex-col items-center px-8 py-5 lg:py-10 shadow-main">
 								<span>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const ContactDetails = () => {
 									020 7123 4567
 								</a>
 							</div>
-							<div className="flex flex-col items-center gap-3 px-8 py-10 shadow-main">
+							<div className="flex flex-col items-center px-8 py-5 lg:py-10 shadow-main">
 								<span>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"

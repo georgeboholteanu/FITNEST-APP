@@ -20,8 +20,8 @@ const Navbar = () => {
 			</Link>
 
 			{/* navbar desktop */}
-			<nav className="header-links text-white  font-semibold text-base lg:text-lg">
-				<ul className="flex items-center justify-center pl-20 ">
+			<nav className="header-links text-white font-semibold text-base lg:text-lg">
+				<ul className="flex items-center justify-center md:pt-4 pl-20 ">
 					<li className="p-3 xl:p-6">
 						<Link to="/" className="hover:text-yellow-500 ">
 							<span className="hover:underline underline-offset-4 decoration-gray-300">Home</span>
@@ -37,7 +37,7 @@ const Navbar = () => {
 					</li>
 					<li className="p-3 xl:p-6">
 						<Link
-							to="/dashboard"
+							to="/ourteam"
 							className="hover:text-yellow-500"
 						>
 							<span className="hover:underline underline-offset-4 decoration-gray-300">Our Team</span>

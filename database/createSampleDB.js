@@ -1,5 +1,5 @@
 import UserX from "../models/UserX.js";
-import db from "../database/database.js";
+import db from "./database.js";
 
 // Create a function to recreate the "users" table
 async function recreateDatabase() {
