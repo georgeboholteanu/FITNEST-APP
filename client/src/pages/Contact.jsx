@@ -1,7 +1,7 @@
 const Contact = () => {
 	return (
 		<div className="min-h-screen bg-cover">
-			<div className="flex flex-col min-h-screen bg-black/60">
+			<div className="max-w-screen-xl flex flex-col bg-black/60">
 				<div className="container flex flex-col flex-1 px-6 py-12 mx-auto">
 					<div className="flex-1 lg:flex lg:items-center text-center md:text-left lg:text-left">
 						{/* title */}

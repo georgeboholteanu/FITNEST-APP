@@ -1,11 +1,11 @@
-import Card from "./Card";
+import Coach from "./Coach";
 import PropTypes from "prop-types";
 
-const CardList = ({ cardData }) => {
+const CoachList = ({ coachData }) => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-5 lg:gap-5 xl:gap-10 px-5 md:px-4 lg:px-10 md:gap-y-2">
-			{cardData.map((card, index) => (
-				<Card
+			{coachData.map((card, index) => (
+				<Coach
 					key={index}
 					name={card.name}
 					class_name={card.class_name}
@@ -18,8 +18,8 @@ const CardList = ({ cardData }) => {
 	);
 };
 
-CardList.propTypes = {
-	cardData: PropTypes.arrayOf(
+CoachList.propTypes = {
+	coachData: PropTypes.arrayOf(
 		PropTypes.shape({
 			name: PropTypes.string.isRequired,
 			class_name: PropTypes.string.isRequired,
@@ -30,4 +30,4 @@ CardList.propTypes = {
 	).isRequired,
 };
 
-export default CardList;
+export default CoachList;

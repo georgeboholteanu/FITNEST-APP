@@ -1,11 +1,11 @@
-import Card from "./Card";
+import Class from "./Class";
 import PropTypes from "prop-types";
 
-const CardList = ({ cardData }) => {
+const ClassList = ({ classData }) => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 lg:gap-10 md:px-5 lg:px-10">
-			{cardData.map((card, index) => (
-				<Card
+		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-5 lg:gap-5 xl:gap-10 px-5 md:px-4 lg:px-10 md:gap-y-2">
+			{classData.map((card, index) => (
+				<Class
 					key={index}
 					title={card.title}
 					description={card.description}
@@ -17,8 +17,8 @@ const CardList = ({ cardData }) => {
 	);
 };
 
-CardList.propTypes = {
-	cardData: PropTypes.arrayOf(
+ClassList.propTypes = {
+	classData: PropTypes.arrayOf(
 		PropTypes.shape({
 			title: PropTypes.string.isRequired,
 			description: PropTypes.string.isRequired,
@@ -28,4 +28,4 @@ CardList.propTypes = {
 	).isRequired,
 };
 
-export default CardList;
+export default ClassList;

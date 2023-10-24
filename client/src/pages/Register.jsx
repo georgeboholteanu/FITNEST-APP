@@ -33,13 +33,12 @@ const Register = () => {
 			if (response.ok) {
 				const result = await response.json();
 				setRegisterResult(result);
-				console.log(result.message);
+				toast.success(result.message);
 			} else if (response.status === 400) {
-				// Handle 401 (Unauthorized) error
 				const errorData = await response.json();
-				toast.error(errorData.message);
+				toast.error(response.status + " " + errorData.message);
 			} else {
-				throw toast.error("Registration failed");
+				throw toast.error(response.status);
 			}
 		} catch (err) {
 			toast.error(err?.data?.message || err.error);
@@ -63,6 +62,7 @@ const Register = () => {
 
 				<form
 					action="/register"
+					id="registerForm"					
 					onSubmit={handleRegister}
 					className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
 				>

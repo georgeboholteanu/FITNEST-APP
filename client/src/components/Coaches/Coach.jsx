@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Card = ({ name, class_name, specialization, imageSrc, imageAlt }) => {
+const Coach = ({ name, class_name, specialization, imageSrc, imageAlt }) => {
 	return (
 		<div className="w-full flex flex-col rounded-lg bg-white bg-clip-border text-gray-700 shadow-lg my-2">
 			{/* image */}
@@ -46,7 +46,7 @@ const Card = ({ name, class_name, specialization, imageSrc, imageAlt }) => {
 	);
 };
 
-Card.propTypes = {
+Coach.propTypes = {
 	name: PropTypes.string.isRequired,
 	class_name: PropTypes.string.isRequired,
 	specialization: PropTypes.string.isRequired,
@@ -54,4 +54,4 @@ Card.propTypes = {
 	imageAlt: PropTypes.string.isRequired,
 };
 
-export default Card;
+export default Coach;

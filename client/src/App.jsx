@@ -8,10 +8,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Footer from "./components/Footer";
 import Facilities from "./pages/Facilities";
-import OurTeam from "./pages/OurTeam";
+import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
-import PrivateRoute from "./components/PrivateRoute";
+// import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,7 +23,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/facilities" element={<Facilities />} />
-				<Route path="/ourteam" element={<OurTeam />} />
+				<Route path="/team" element={<Team />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route
 					path="/login"
@@ -34,19 +34,11 @@ function App() {
 				<Route
 					path="/dashboard"
 					element={
-						<PrivateRoute isLoggedIn={isLoggedIn}>
-							<Dashboard />
-						</PrivateRoute>
+						// <PrivateRoute isLoggedIn={isLoggedIn}>
+						<Dashboard />
+						// </PrivateRoute>
 					}
 				/>
-				{/* <Route
-					path="/dashboard"
-					element={<PrivateRoute isLoggedIn={isLoggedIn} />}
-				>
-					<Route index element={<Dashboard />} />
-				</Route> */}
-
-	
 			</Routes>
 			<Footer />
 		</Router>

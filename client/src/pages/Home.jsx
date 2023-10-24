@@ -2,7 +2,6 @@ import ContactDetails from "../components/ContactDetails";
 import Subscribe from "../components/Subscribe";
 import Hero from "../components/Hero";
 
-
 const Home = () => {
 	// const scrollToElement = (elementID) => {
 	// 	const targetSection = document.getElementById(elementID);
@@ -13,8 +12,8 @@ const Home = () => {
 
 	return (
 		<div className="w-full">
-      <Hero />
-      <Subscribe />
+			<Hero />
+			<Subscribe />
 			<ContactDetails />
 		</div>
 	);

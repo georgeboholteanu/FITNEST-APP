@@ -1,8 +1,8 @@
-import CardList from "./CardList";
+import CoachList from "./CoachList";
 import coaches from "../../data/coaches.json";
 
-const Coaches = () => {
-	const cardData = coaches.map(
+const AllCoaches = () => {
+	const coachData = coaches.map(
 		({ name, class_name, specialization, imageSrc, imageAlt }) => {
 			// Load images dynamically from the public directory
 			const imgSrc = `${imageSrc}`;
@@ -20,9 +20,9 @@ const Coaches = () => {
 			<h2 className="titleTrainer py-5 font-extrabold text-4xl">
 				Coaches
 			</h2>
-			<CardList cardData={cardData} />
+			<CoachList coachData={coachData} />
 		</div>
 	);
 };
 
-export default Coaches;
+export default AllCoaches;

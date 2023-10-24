@@ -1,11 +1,7 @@
-import Classes from "../components/Classes/Classes";
+import AllClasses from "../components/Classes/AllClasses";
 
 const Facilities = () => {
-	return (
-		<div>
-			<Classes />
-		</div>
-	);
+	return <AllClasses />;
 };
 
 export default Facilities;
