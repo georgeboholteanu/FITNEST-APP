@@ -1,7 +1,11 @@
 import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
 
-const db = new Sequelize('gym', 'root', 'sssqqqlll', {
-  host: 'localhost',
+// Load environment variables from .env file
+dotenv.config();
+
+const db = new Sequelize(process.env.DB_DBNAME || 'gym', process.env.DB_USERNAME || 'root', process.env.DB_PASSWORD || sssqqqlll, {
+  host: process.env.DB_HOST || 'localhost',
   dialect: 'mysql',
 });
 

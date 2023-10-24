@@ -1,4 +1,7 @@
-# App with Authentification Using Sequalize
+
+# fitNEST - GYM
+
+## Authentification Using Sequalize and Cloud Stored MySQL Database
 
 ![node-current](https://img.shields.io/node/v/vercel?style=for-the-badge&labelColor=green&color=)
 ![REACT](https://img.shields.io/badge/REACT-lightblue?style=for-the-badge&logoColor=white)
@@ -6,18 +9,20 @@
 ![TAILWIND](https://img.shields.io/badge/TAILWIND-pink?style=for-the-badge&logoColor=white)
 ![SEQUALIZE](https://img.shields.io/badge/SEQUALIZE-blue?style=for-the-badge&logoColor=white)
 ![VITE](https://img.shields.io/badge/VITE-%23E4E10F?style=for-the-badge&logoColor=white)
-[![VERCEL](https://img.shields.io/badge/VERCEL-black.svg?style=for-the-badge&logoColor=white)](https://fitnest-5ivxgxd96-georgeboholteanus-projects.vercel.app/)
+[![MYSQL CLOUD CONSOLE](https://img.shields.io/badge/MySQL-Clever_Cloud_Console-purple.svg?style=for-the-badge&logoColor=white)](https://fitnest.vercel.app/)
+[![VERCEL](https://img.shields.io/badge/VERCEL-black.svg?style=for-the-badge&logoColor=white)](https://fitnest.vercel.app/)
 
 ## Description
 
-The app lets you create a new account or login into an existing one. Within your account, you are able to book specific gym classes and check their availability (WIP).
+The app lets you create a new account or login into an existing one. Within your account, you are able to book specific gym classes and check their availability.
 
 **Sequelize** library has been used as an ORM (Object-Relational-Mapper) for Node.js in order to interact with MySQL database. This can be viewed or changed through **MySQL Workbench** on your local machine.
 
-### **Deployed on VERCEL** : [fitNEST-app](https://fitnest-5ivxgxd96-georgeboholteanus-projects.vercel.app)
-
-![Desktop Preview](./client/src/assets/appDesktopPreview.jpg)
-
+### **Deployed on VERCEL** : [fitNEST-app](https://fitnest.vercel.app/)
+<div style="text-align: center">
+<img style="padding: 4px" src="./client/src/assets/appMobilePreview.png" height="420">
+<img style="padding: 4px" src="./client/src/assets/appDesktopPreview.jpg" width="785">  
+</div>
 ## Installation
 
 ```bash
@@ -41,15 +46,22 @@ npm run client
 
 ## Requirements
 
-- [MySQL URL](https://dev.mysql.com/downloads/installer/) server installed and running.
+### Locally - testing
+
+- [MySQL](https://dev.mysql.com/downloads/installer/) server installed and running locally.
 
 - MySQL database created locally in order for the user authentication or registration to work properly.
 
-- Server was set up to look for a specific database and table but they can be ammended accordingly to your local setup.
-
-  - **SCHEMA name : 'gym'** 
+  - **SCHEMA name : 'gym'**
   - **TABLE name : 'users'**
 
+### Cloud based - production
+
+A cloud MySQL server has been configured to be able to access the login and register functionality.
+
+Login credentials for the server ***client/database/database.js*** are stored in the ***.env*** file
+
+- #### **MySQL Cloud Server** : [Clever Cloud Console](https://console.clever-cloud.com/)
 
 ## API Testing Endpoints
 
