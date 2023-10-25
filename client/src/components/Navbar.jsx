@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { UilBars, UilListUiAlt } from "@iconscout/react-unicons";
+import {HiMenu, HiOutlineMenuAlt3} from "react-icons/hi";
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,13 +85,13 @@ const Navbar = () => {
 				<ul className="navLinks flex flex-col md:hidden items-end font-semibold text-white pt-2">
 					<li className="px-5 py-1 xl:px-8">
 						<button
-							className="burger text-2xl"
+							className="burger text-3xl"
 							onClick={toggleMobileMenu}
 						>
 							{isMenuOpen ? (
-								<UilListUiAlt className="text-black" />
+								<HiOutlineMenuAlt3 className="text-yellow-500"/>
 							) : (
-								<UilBars />
+								<HiMenu />
 							)}
 						</button>
 					</li>

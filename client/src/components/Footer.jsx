@@ -1,102 +1,85 @@
 import { Link } from "react-router-dom";
+import {
+	FaInstagram,
+	FaTwitter,
+	FaFacebook,
+	FaYoutube,
+	FaTiktok,
+} from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<footer className="">
+		<footer className="text-center md:text-left">
 			{/* footer body */}
-			<div className="bg-gray-800 text-gray-400">
-				<div className="grid grid-cols-1 md:grid-cols-2 md:px-5 lg:px-20">
-					{/* logo */}
-					<div className="md:flex lg:flex md:gap-28 md:col-span-12 lg:col-span-12 align-middle px-10 md:px-5 lg:px-5 py-2 justify-between">
-						<Link to="/" className="logo flex text-5xl">
+			<div className="flex flex-col md:flex-row bg-gray-800 text-white px-10 md:px-20 md:justify-between">
+				{/* logo */}
+				<div className=" py-2">
+					<Link to="/">
+						<div className="logo inline-flex text-4xl">
 							<h1 className="text-yellow-500">fit</h1>
-							<h1 className="">NEST</h1>
-						</Link>
-						<div></div>
+							<h1>NEST</h1>
+						</div>
+						<p className="motto text-white">
+							Your training partner
+						</p>
+					</Link>
+				</div>
+				{/* facilities */}
+				<div className="block py-3">
+					<h3 className="footerTitle uppercase font-bold text-xl text-blue-500">
+						Facilities
+					</h3>
+					<div className="footerLinks">
+						<ul className="inline-flex space-x-4 text-sm py-2">
+							<li className="hover:text-yellow-500">
+								<Link to="/">Events</Link>
+							</li>
+							<li className="hover:text-yellow-500">
+								<Link to="/">Nutrition</Link>
+							</li>
+							<li className="hover:text-yellow-500">
+								<Link to="/">Personal Training</Link>
+							</li>
+							<li className="hover:text-yellow-500">
+								<Link to="/">Classes</Link>
+							</li>
+						</ul>
 					</div>
-					<div className="flex flex-col md:flex-row lg:flex-row md:col-span-12 lg:col-span-10 px-10 md:px-5 lg:px-5 py-2 justify-between">
-						{/* facilities */}
-						<div className="flex flex-col text-left">
-							<div className="">
-								<h3 className="inline-block text-lg border-b-4 border-blue-500">
-									Facilities
-								</h3>
-							</div>
-							<ul className="flex text-sm py-2 md:py-4 lg:py-4 justify-between md:justify-between">
-								<li className="">
-									<Link
-										to="/facilities"
-										className="hover:text-yellow-500"
-									>
-										<span>Events</span>
+				</div>
+				{/* follow us */}
+				<div className="block py-2">
+					<div className="container justify-center">
+						<h3 className="footerTitle uppercase font-bold text-xl text-blue-500">
+							Follow
+						</h3>
+						<div className="footerLinks r">
+							<ul className="inline-flex space-x-4 text-md py-2">
+								<li className="hover:text-yellow-500">
+									<Link to="/">
+										<FaInstagram />
 									</Link>
 								</li>
-								<li className="md:px-2 lg:px-4">
-									<Link
-										to="/facilities"
-										className="hover:text-yellow-500"
-									>
-										<span>Nutrition</span>
+								<li className="hover:text-yellow-500">
+									<Link to="/">
+										<FaTwitter />
 									</Link>
 								</li>
-								<li className="md:px-2 lg:px-4">
-									<Link
-										to="/facilities"
-										className="hover:text-yellow-500"
-									>
-										<span>Personal Training</span>
+								<li className="hover:text-yellow-500">
+									<Link to="/">
+										<FaFacebook />
 									</Link>
 								</li>
-								<li className="">
-									<Link
-										to="/facilities"
-										className="hover:text-yellow-500"
-									>
-										<span>Classes</span>
+								<li className="hover:text-yellow-500">
+									<Link to="/">
+										<FaYoutube />
+									</Link>
+								</li>
+								<li className="hover:text-yellow-500">
+									<Link to="/">
+										<FaTiktok />
 									</Link>
 								</li>
 							</ul>
-						</div>
-
-						{/* follow us */}
-						<div className="flex flex-col text-left">
-							<div className="flex">
-								<h3 className="inline-block text-lg border-b-4 border-blue-500">
-									Follow Us
-								</h3>
-							</div>
-							<div className="flex py-2 text-xl justify-between">
-								<a
-									href="#"
-									className="text-center pr-5 hover:text-yellow-500"
-								>
-									<i className="fa-brands fa-facebook"></i>
-								</a>
-								<a
-									href="#"
-									className="text-center pr-5 hover:text-yellow-500"
-								>
-									<i className="fa-brands fa-tiktok"></i>
-								</a>
-								<a
-									href="#"
-									className="text-center pr-5 hover:text-yellow-500"
-								>
-									<i className="fa-brands fa-twitter"></i>
-								</a>
-								<a
-									href="#"
-									className="text-center pr-5 hover:text-yellow-500"
-								>
-									<i className="fa-brands fa-pinterest"></i>
-								</a>
-								<a
-									href="#"
-									className="text-center pr-5 hover:text-yellow-500"
-								>
-									<i className="fa-brands fa-youtube"></i>
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -104,7 +87,7 @@ const Footer = () => {
 			{/* </div> */}
 
 			{/* copyright */}
-			<div className=" py-4 text-gray-100 glass">
+			<div className=" py-4 text-gray-100 glass font-semibold text-sm">
 				<div className="container mx-auto px-4">
 					<div className="-mx-4 flex flex-wrap justify-center">
 						<div className="px-4 w-full text-center sm:w-auto sm:text-left">
