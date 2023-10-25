@@ -25,6 +25,7 @@ function App() {
 				<Route path="/facilities" element={<Facilities />} />
 				<Route path="/team" element={<Team />} />
 				<Route path="/contact" element={<Contact />} />
+				<Route path="/dashboard" element={<Dashboard />} />
 				<Route
 					path="/login"
 					element={<Login setIsLoggedIn={setIsLoggedIn} />}

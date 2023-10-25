@@ -11,9 +11,9 @@ const Footer = () => {
 	return (
 		<footer className="text-center md:text-left">
 			{/* footer body */}
-			<div className="flex flex-col md:flex-row bg-gray-800 text-white px-10 md:px-20 md:justify-between">
+			<div className="flex flex-col md:flex-row bg-gray-800 text-white px-10 md:px-20 md:justify-between md:align-middle">
 				{/* logo */}
-				<div className=" py-2">
+				<div className="py-2">
 					<Link to="/">
 						<div className="logo inline-flex text-4xl">
 							<h1 className="text-yellow-500">fit</h1>
@@ -25,23 +25,23 @@ const Footer = () => {
 					</Link>
 				</div>
 				{/* facilities */}
-				<div className="block py-3">
-					<h3 className="footerTitle uppercase font-bold text-xl text-blue-500">
+				<div className="block py-3 md:py-2">
+					<h3 className="footerTitle uppercase font-bold text-lg text-blue-500">
 						Facilities
 					</h3>
 					<div className="footerLinks">
 						<ul className="inline-flex space-x-4 text-sm py-2">
 							<li className="hover:text-yellow-500">
-								<Link to="/">Events</Link>
+								<Link to="/facilities">Events</Link>
 							</li>
 							<li className="hover:text-yellow-500">
-								<Link to="/">Nutrition</Link>
+								<Link to="/facilities">Nutrition</Link>
 							</li>
 							<li className="hover:text-yellow-500">
-								<Link to="/">Personal Training</Link>
+								<Link to="/facilities">Personal Training</Link>
 							</li>
 							<li className="hover:text-yellow-500">
-								<Link to="/">Classes</Link>
+								<Link to="/facilities">Classes</Link>
 							</li>
 						</ul>
 					</div>
@@ -49,7 +49,7 @@ const Footer = () => {
 				{/* follow us */}
 				<div className="block py-2">
 					<div className="container justify-center">
-						<h3 className="footerTitle uppercase font-bold text-xl text-blue-500">
+						<h3 className="footerTitle uppercase font-bold text-lg text-blue-500">
 							Follow
 						</h3>
 						<div className="footerLinks r">
@@ -87,12 +87,15 @@ const Footer = () => {
 			{/* </div> */}
 
 			{/* copyright */}
-			<div className=" py-4 text-gray-100 glass font-semibold text-sm">
+			<div className=" py-4 text-gray-100 glass font-semibold text-xs">
 				<div className="container mx-auto px-4">
 					<div className="-mx-4 flex flex-wrap justify-center">
-						<div className="px-4 w-full text-center sm:w-auto sm:text-left">
-							Copyright © 2023 George Boholteanu. All Rights
-							Reserved.
+						<div className="px-4 w-full text-center sm:w-auto sm:text-left ">
+							Copyright © 2023{" "}
+							<Link to="mailto:george.boholteanu@gmail.com" className="text-blue-400 hover:text-yellow-400">
+								George Boholteanu {"  "} 
+							</Link>
+							All Rights Reserved
 						</div>
 					</div>
 				</div>

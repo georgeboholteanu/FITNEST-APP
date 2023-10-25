@@ -13,13 +13,13 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className="glass px-5 md:px-20 py-4 flex md:items-center justify-between">
+			<nav className="px-5 md:px-20 py-4 flex md:items-center justify-between">
 				{/* logo */}
 				<div className="block">
-					<div className="logo flex text-4xl">
+					<Link to="/dashboard" className="logo inline-flex text-4xl">
 						<h1 className="text-yellow-500">fit</h1>
 						<h1>NEST</h1>
-					</div>
+					</Link>
 					<p className="motto text-white">Your training partner</p>
 					{isMenuOpen && (
 						<>

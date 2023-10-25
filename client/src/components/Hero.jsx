@@ -4,8 +4,8 @@ const Hero = () => {
 	return (
 		<div className="hero min-h-[400px] flex items-center relative">
 			{/* video */}
-			<video autoPlay loop muted className="h-[500px] md:h-full lg:h-full w-full object-cover">
-				<source src="assets/video/video (1080p).mp4" type="video/mp4" />
+			<video autoPlay loop muted className="h-[500px] md:h-full w-full object-cover">
+				<source src="/assets/video/video (1080p).mp4" type="video/mp4" />
 			</video>
 			{/* hero + CTA */}
 			<div className="absolute mx-5 lg:mx-20 text-left text-white px-5">
