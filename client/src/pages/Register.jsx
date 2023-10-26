@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Register = () => {
 	const [first_name, setfirst_name] = useState("");
 	const [last_name, setlast_name] = useState("");
@@ -43,7 +42,6 @@ const Register = () => {
 		} catch (err) {
 			toast.error(err?.data?.message || err.error);
 		}
-		
 	};
 
 	return (
@@ -57,12 +55,12 @@ const Register = () => {
 					Our gym is equipped with the latest fitness equipment,
 					ensuring you have access to everything you need for a
 					successful workout. From cardio machines to strength
-					training equipment, we've got it all.
+					training equipment, we&pos;ve got it all.
 				</p>
 
 				<form
 					action="/register"
-					id="registerForm"					
+					id="registerForm"
 					onSubmit={handleRegister}
 					className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
 				>
@@ -88,7 +86,6 @@ const Register = () => {
 								className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
 								placeholder="First Name"
 							/>
-
 						</div>
 					</div>
 					<div>
@@ -103,8 +100,6 @@ const Register = () => {
 								className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
 								placeholder="Last Name"
 							/>
-
-							
 						</div>
 					</div>
 					<div>

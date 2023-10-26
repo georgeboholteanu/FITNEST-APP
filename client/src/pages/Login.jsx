@@ -57,7 +57,7 @@ const Login = () => {
 					</h1>
 					<div className="logo flex justify-center text-4xl">
 						<h1 className="text-yellow-500 ">fit</h1>
-						<h1 className="">NEST</h1>
+						<h1 className="text-black">NEST</h1>
 					</div>
 
 					<p className="mx-auto mt-4 max-w-md text-center text-gray-200">
@@ -147,9 +147,11 @@ const Login = () => {
 
 						<button
 							type="submit"
-							className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+							className="block w-full rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-3 text-sm font-medium text-white"
 						>
-							Sign in
+							<Link to="/" className="underline">
+								Sign In
+							</Link>
 						</button>
 						<p className="text-center text-sm text-gray-200 ">
 							No account?{" "}
