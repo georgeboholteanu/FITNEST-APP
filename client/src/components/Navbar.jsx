@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {HiMenu, HiOutlineMenuAlt3} from "react-icons/hi";
+import { HiMenu, HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,20 +13,21 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className="px-5 md:px-20 py-4 flex md:items-center justify-between">
+			<nav className="px-5 border-b-2 border-gray-300 md:px-20 py-4 flex md:items-center justify-between md:justify-center md:space-x-96 flex-shrink-0">
 				{/* logo */}
 				<div className="block">
-					<Link to="/dashboard" className="logo inline-flex text-4xl">
+					<Link to="/" className="logo inline-flex text-4xl">
 						<h1 className="text-yellow-500">fit</h1>
-						<h1>NEST</h1>
+						<h1 className="text-black">NEST</h1>
 					</Link>
 					<p className="motto text-white">Your training partner</p>
+
 					{isMenuOpen && (
 						<>
 							<div className="auth flex md:hidden items-center space-x-3 pt-20">
 								<Link
 									to="/login"
-									className="hover:text-yellow-500 text-md"
+									className="text-black hover:text-yellow-500 text-md"
 								>
 									<svg
 										viewBox="0 0 640 512"
@@ -83,13 +84,13 @@ const Navbar = () => {
 				</ul>
 				{/* nav links mobile*/}
 				<ul className="navLinks flex flex-col md:hidden items-end font-semibold text-white pt-2">
-					<li className="px-5 py-1 xl:px-8">
+					<li className="py-1 xl:px-8">
 						<button
 							className="burger text-3xl"
 							onClick={toggleMobileMenu}
 						>
 							{isMenuOpen ? (
-								<HiOutlineMenuAlt3 className="text-yellow-500"/>
+								<HiOutlineMenuAlt3 className="text-yellow-500" />
 							) : (
 								<HiMenu />
 							)}
@@ -97,7 +98,7 @@ const Navbar = () => {
 					</li>
 					{isMenuOpen && (
 						<>
-							<li className="px-5 py-1 xl:px-8 hover:text-yellow-500">
+							<li className="py-1 xl:px-8 hover:text-yellow-500">
 								<Link
 									to="/"
 									className="hover:underline underline-offset-4 decoration-gray-300"
@@ -105,7 +106,7 @@ const Navbar = () => {
 									Home
 								</Link>
 							</li>
-							<li className="px-5 py-1 xl:px-8 hover:text-yellow-500">
+							<li className="py-1 xl:px-8 hover:text-yellow-500">
 								<Link
 									to="/facilities"
 									className="hover:underline underline-offset-4 decoration-gray-300"
@@ -113,7 +114,7 @@ const Navbar = () => {
 									Facilities
 								</Link>
 							</li>
-							<li className="px-5 py-1 xl:px-8 hover:text-yellow-500">
+							<li className="py-1 xl:px-8 hover:text-yellow-500">
 								<Link
 									to="/team"
 									className="hover:underline underline-offset-4 decoration-gray-300"
@@ -121,7 +122,7 @@ const Navbar = () => {
 									Team
 								</Link>
 							</li>
-							<li className="px-5 xl:px-8 hover:text-yellow-500">
+							<li className="xl:px-8 hover:text-yellow-500">
 								<Link
 									to="/contact"
 									className="hover:underline underline-offset-4 decoration-gray-300"
@@ -136,7 +137,7 @@ const Navbar = () => {
 				<div className="auth hidden md:flex justify-center items-center">
 					<Link
 						to="/login"
-						className="hover:text-yellow-500 px-5 text-lg"
+						className="text-black hover:text-yellow-500 px-5 text-lg"
 					>
 						<svg
 							viewBox="0 0 640 512"
@@ -156,7 +157,6 @@ const Navbar = () => {
 			</nav>
 		</>
 	);
-
 };
 
 export default Navbar;

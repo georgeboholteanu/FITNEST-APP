@@ -1,4 +1,3 @@
-
 # fitNEST - GYM
 
 ## Authentification Using Sequalize and Cloud Stored MySQL Database
@@ -14,11 +13,16 @@
 
 ## Description
 
-The app lets you create a new account or login into an existing one. Within your account, you are able to book specific gym classes and check their availability.
-
-**Sequelize** library has been used as an ORM (Object-Relational-Mapper) for Node.js in order to interact with MySQL database. This can be viewed or changed through **MySQL Workbench** on your local machine.
+- The app uses **React** routing to navigate between different pages of the app.
+- An **Express** server has been set up for user authentification and registration.
+- **Sequelize** library has been used as an ORM (Object-Relational-Mapper) for **Node.js** in order to interact with MySQL database.
+- A database can be configured for testing locally using **MySQL Workbench**.
+- The database is being accessed from a mySQL server configured using [Clever Cloud Console](https://console.clever-cloud.com/).
+- After a successful login the user will be redirected to the user dashboard page.
+- Following registration user paswords are **hashed** before being stored in the database.
 
 ### **Deployed on VERCEL** : [fitNEST-app](https://fitnest.vercel.app/)
+
 <div style="text-align: center">
 <img style="padding: 4px" src="./client/src/assets/appMobilePreview.png" height="420">
 <img style="padding: 4px" src="./client/src/assets/appDesktopPreview.jpg" width="785">  
@@ -46,31 +50,29 @@ npm run client
 
 ## Requirements
 
-### Locally - testing
+-   ### MySQL Local Server - Testing
 
-- [MySQL](https://dev.mysql.com/downloads/installer/) server installed and running locally.
+    -   [MySQL](https://dev.mysql.com/downloads/installer/) server installed and running locally.
 
-- MySQL database created locally in order for the user authentication or registration to work properly.
+    -   MySQL database created locally in order for the user authentication or registration to work properly.
+        -   **SCHEMA name : 'gym'**
+        -   **TABLE name : 'users'**
+    -   MySQL login credentials will need to be ammended per user cofiguration on **_client/database/database.js_**.
 
-  - **SCHEMA name : 'gym'**
-  - **TABLE name : 'users'**
+-   ### MySQL Cloud Server - Production
 
-### Cloud based - production
-
-A cloud MySQL server has been configured to be able to access the login and register functionality.
-
-Login credentials for the server ***client/database/database.js*** are stored in the ***.env*** file
-
-- #### **MySQL Cloud Server** : [Clever Cloud Console](https://console.clever-cloud.com/)
+    -   A cloud MySQL server has been configured to be able to access the login and register functionality.
+    -   MySQL cloud configuration shall match the variables stored in the **_.env_** file stored in the root folder of the app.
 
 ## API Testing Endpoints
 
-- GET : `http://localhost:8000/api/users`
-- POST: `http://localhost:8000/api/users/register/`
-- POST: `http://localhost:8000/api/auth/login`
+-   GET : `http://localhost:8000/api/users`
+-   POST: `http://localhost:8000/api/users/register/`
+-   POST: `http://localhost:8000/api/auth/login`
+
+[**Postman**](https://www.postman.com/) or any similar application can be used for testing API requests.
 
 ## Purpose
 
-- Practice
-- Improve knowledge on full stack development.
-  
+-   Practice
+-   Improve knowledge on full stack development.
