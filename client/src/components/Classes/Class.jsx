@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { FaDumbbell, FaMusic, FaMagic, FaRegHeart } from "react-icons/fa";
 
 const Class = ({ title, description, imageSrc, imageAlt }) => {
 	return (
@@ -13,7 +14,7 @@ const Class = ({ title, description, imageSrc, imageAlt }) => {
 			<div className="p-6 flex-col items-center justify-center">
 				{/* title */}
 				<div className="mb-3 ">
-					<h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+					<h5 className="block font-sans text-xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
 						{title}
 					</h5>
 				</div>
@@ -23,10 +24,10 @@ const Class = ({ title, description, imageSrc, imageAlt }) => {
 
 				{/* icons */}
 				<div className="mt-6 mb-2 group inline-flex flex-wrap items-center gap-3">
-					<i className="fa-solid fa-dumbbell rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"></i>
-					<i className="fa-solid fa-music rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"></i>
-					<i className="fa-solid fa-wand-magic-sparkles rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"></i>
-					<i className="fa-solid fa-heart rounded-full border border-violet-500/5 bg-violet-500/5 p-3 text-violet-500 transition-colors hover:border-violet-500/10 hover:bg-violet-500/10 hover:!opacity-100 group-hover:opacity-70"></i>
+					<FaDumbbell className="mx-4 text-xl text-pink-500"/>
+					<FaMusic className="mx-4 text-xl text-pink-500"/>
+					<FaMagic className="mx-4 text-xl text-pink-500"/>
+					<FaRegHeart className="mx-4 text-xl text-pink-500"/>					
 				</div>
 			</div>
 

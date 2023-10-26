@@ -49,8 +49,8 @@ const Login = () => {
 	};
 
 	return (
-		<>			
-			<div className="mx-auto max-w-screen-xl min-h-screen px-4 py-16 sm:px-6 lg:px-8">
+		<>
+			<div className="mx-auto max-w-screen-xl min-h-screen px-4 py-16 sm:px-6 lg:px-8 -mb-56 sm:mt-0">
 				<div className="mx-auto max-w-lg">
 					<h1 className="flex-inline text-center text-2xl font-bold sm:text-3xl">
 						Welcome to{" "}
@@ -149,9 +149,7 @@ const Login = () => {
 							type="submit"
 							className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
 						>
-							{/* <Link to="/"> */}
 							Sign in
-							{/* </Link> */}
 						</button>
 						<p className="text-center text-sm text-gray-200 ">
 							No account?{" "}

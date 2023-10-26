@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { BiHomeAlt2, BiBasketball } from "react-icons/bi";
+import { BiHomeAlt2 } from "react-icons/bi";
 import { HiUserGroup } from "react-icons/hi";
-import { FaBuffer, FaAlgolia } from "react-icons/fa";
+import { FaBuffer, FaAlgolia, FaAngleDoubleRight } from "react-icons/fa";
 
 const Dashboard = () => {
 	// const scrollToElement = (elementID) => {
@@ -13,9 +13,9 @@ const Dashboard = () => {
 
 	return (
 		<>
-			<div className="grid grid-cols-6 grid-flow-row justify-center min-h-screen">
+			<div className="grid grid-cols-6 grid-flow-row justify-center sm:min-h-screen">
 				{/* Navigation */}
-				<div className="col-span-1 flex-row bg-gray-900 justify-center">
+				<div className="py-20 col-span-1 flex-row bg-gray-900 justify-center">
 					<div className="flex justify-center">
 						{/* title */}
 						<h2 className="hidden md:flex uppercase border-b-2 border-gray-400 text-gray-300 text-center p-5 text-xl font-bold">
@@ -25,12 +25,12 @@ const Dashboard = () => {
 
 						<FaBuffer className="flex md:hidden text-gray-400 my-3 text-4xl" />
 					</div>
-					<div className="my-5 justify-start mx-5 align-middle">
+					<div className="justify-start mx-5 align-middle">
 						{/* nav links */}
-						<nav className="flex flex-col space-y-2 lg:space-x-0 lg:space-y-2">
+						<nav className="flex flex-col space-y-14 sm:space-y-2 lg:space-x-0 lg:space-y-2 mt-10 sm:mt-5">
 							<Link
 								to="/"
-								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
+								className="justify-center -mb-2 text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
 							>
 								<div className="text-2xl">
 									<BiHomeAlt2 className="text-yellow-400" />
@@ -58,7 +58,7 @@ const Dashboard = () => {
 								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg bg-gray-800 hover:text-white smooth-hover"
 							>
 								<div className="text-2xl">
-									<BiBasketball className="text-yellow-400" />
+									<FaAngleDoubleRight className="text-yellow-400" />
 								</div>
 								<span className="font-semibold hidden md:block">
 									Groups
@@ -183,7 +183,7 @@ const Dashboard = () => {
 									alt="woman practicing yoga in nature"
 								/>
 								<h4 className="text-white text-2xl font-bold capitalize text-center">
-								Yoga Retreats
+									Yoga Retreats
 								</h4>
 								<p className="text-white/50">98 members</p>
 							</div>
@@ -194,7 +194,7 @@ const Dashboard = () => {
 									alt="a bowl of vegetables"
 								/>
 								<h4 className="text-white text-2xl font-bold capitalize text-center">
-								Nutrition 
+									Nutrition
 								</h4>
 								<p className="text-white/50">72 members</p>
 							</div>
@@ -205,7 +205,7 @@ const Dashboard = () => {
 									alt="woman exercising in the gym"
 								/>
 								<h4 className="text-white text-2xl font-bold capitalize text-center">
-								Fitness Boot Camps
+									Fitness Boot Camps
 								</h4>
 								<p className="text-white/50">36 members</p>
 							</div>
@@ -216,7 +216,7 @@ const Dashboard = () => {
 									alt="girls in the gym dancing in the mirror"
 								/>
 								<h4 className="text-white text-2xl font-bold capitalize text-center">
-								Zumba Classes 
+									Zumba Classes
 								</h4>
 								<p className="text-white/50">61 members</p>
 							</div>
