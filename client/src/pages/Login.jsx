@@ -82,8 +82,8 @@ const Login = () => {
 							<div className="relative">
 								<input
 									type="email"
-									onChange={(e) => setEmail(e.target.value)}
 									value={email}
+									onChange={(e) => setEmail(e.target.value)}
 									className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
 									placeholder="Enter email"
 								/>
@@ -113,6 +113,7 @@ const Login = () => {
 							<div className="relative">
 								<input
 									type="password"
+									value={password}
 									onChange={(e) =>
 										setPassword(e.target.value)
 									}
@@ -148,6 +149,7 @@ const Login = () => {
 						<button
 							type="submit"
 							className="block w-full rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-3 text-sm font-medium text-white"
+							onClick={handleLogin}
 						>
 							Sign In
 						</button>

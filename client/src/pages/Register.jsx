@@ -110,9 +110,9 @@ const Register = () => {
 						<div className="relative">
 							<input
 								type="email"
+								value={email}
 								id="email" //will look for htmlFor value
 								onChange={(e) => setEmail(e.target.value)}
-								value={email}
 								className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
 								placeholder="Email"
 							/>
@@ -144,9 +144,9 @@ const Register = () => {
 						<div className="relative">
 							<input
 								type="password"
+								value={password}
 								id="password" //will look for htmlFor value
 								onChange={(e) => setPassword(e.target.value)}
-								value={password}
 								className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
 								placeholder="Password"
 							/>

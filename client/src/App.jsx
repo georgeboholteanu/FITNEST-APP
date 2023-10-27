@@ -59,10 +59,12 @@ function App() {
 		{
 			path: "dashboard",
 			element: <Dashboard />,
-		},
-		{
-			path: "logout",
-			element: <Home />,
+			children: [
+				{
+					path: "logout",
+					element: <Home />,
+				},
+			],
 		},
 	]);
 
