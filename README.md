@@ -24,8 +24,8 @@
 ### **Deployed on VERCEL** : [fitNEST-app](https://fitnest.vercel.app/)
 
 <div style="text-align: center">
-<img style="padding: 4px" src="./client/src/assets/appMobilePreview.png" height="420">
 <img style="padding: 4px" src="./client/src/assets/appDesktopPreview.jpg" width="785">  
+<img style="padding: 4px" src="./client/src/assets/appMobilePreview.png" height="420">
 </div>
 
 ## Installation

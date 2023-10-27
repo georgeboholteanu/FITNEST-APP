@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  margin: 0 auto;
-  justify-content: center;
+.main {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-image: linear-gradient(to right top, #051937, #392f52, #008793, #178278, #6da43c);
 }
+
 
 .logo {
   font-family: 'Changa One', sans-serif;

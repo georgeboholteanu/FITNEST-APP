@@ -10,6 +10,13 @@ const Navbar = () => {
 		setIsMenuOpen(!isMenuOpen);
 		setIsPlusIconVisible(!isPlusIconVisible);
 	};
+	
+	const scrollToElement = (elementID) => {
+		const targetSection = document.getElementById(elementID);
+		if (targetSection) {
+			targetSection.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 
 	return (
 		<>

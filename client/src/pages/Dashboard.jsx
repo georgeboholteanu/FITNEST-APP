@@ -1,87 +1,104 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Dashboard = () => {
-	// const scrollToElement = (elementID) => {
-	// 	const targetSection = document.getElementById(elementID);
-	// 	if (targetSection) {
-	// 		targetSection.scrollIntoView({ behavior: "smooth" });
-	// 	}
-	// };
+	const navigate = useNavigate();
+
+	const handleSignout = () => {
+
+		// Redirect to the login page after logout.
+		navigate("/login");
+
+		// Show a toast message to confirm the logout.
+		toast.success("You have been successfully logged out.");
+	};
 
 	return (
 		<>
 			<div className="grid grid-cols-6 grid-flow-row justify-center sm:min-h-screen">
 				{/* Navigation */}
-				<div className="py-20 col-span-1 flex-row bg-gray-900 justify-center">
-					<div className="flex justify-center">
-						{/* title */}
-						<h2 className="hidden md:flex uppercase border-b-2 border-gray-400 text-gray-300 text-center p-5 text-xl font-bold">
-							{" "}
-							dashboard
-						</h2>
+				<div className="py-20 col-span-1 flex-row bg-gray-900 justify-center items-center">
+					{/* nav links */}
+					<nav className="flex flex-col space-y-10 sm:space-y-10 md:space-y-6 lg:space-y-4 lg:space-x-0  mt-10 sm:mt-5  text-center items-center">
+						<div className="justify-center -mb-2 text-white/50 md:p-4 my-3 inline-flex space-x-4 ">
+							{/* title */}
+							<span className=" material-symbols-outlined text-gray-300 pt-1 md:hidden block ">
+								dashboard
+							</span>
+							<h2 className="hidden md:flex uppercase mx-3 text-lg  border-b-2 border-gray-400  text-gray-300 text-center font-bold">
+								{" "}
+								dashboard
+							</h2>
+						</div>
+						<Link
+							to="/"
+							className="justify-center -mb-2 text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
+						>
+							<span className="material-symbols-outlined text-yellow-400 p-2 sm:p-0 p-2 sm:p-0">
+								home
+							</span>
+							<span className="font-semibold hidden md:block">
+								Home
+							</span>
+						</Link>
 
-						<span className="material-symbols-outlined text-gray-300 text-3xl">
-							dashboard
-						</span>
-					</div>
-					<div className="justify-start mx-5 align-middle">
-						{/* nav links */}
-						<nav className="flex flex-col space-y-14 sm:space-y-2 lg:space-x-0 lg:space-y-2 mt-10 sm:mt-5">
-							<Link
-								to="/"
-								className="justify-center -mb-2 text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
-							>
-								<span className="material-symbols-outlined text-yellow-400">
-									home
-								</span>
-								<span className="font-semibold hidden md:block">
-									Home
-								</span>
-							</Link>
+						<Link
+							to="/"
+							className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
+						>
+							<span className="material-symbols-outlined text-yellow-400 p-2 sm:p-0">
+								diversity_3
+							</span>
+							<span className="font-semibold hidden md:block">
+								Classes
+							</span>
+						</Link>
 
-							<Link
-								to="/"
-								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
-							>
-								<span className="material-symbols-outlined text-yellow-400">
-									diversity_3
-								</span>
-								<span className="font-semibold hidden md:block">
-									Classes
-								</span>
-							</Link>
+						<Link
+							to="/"
+							className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
+						>
+							<span className="material-symbols-outlined text-yellow-400 p-2 sm:p-0">
+								group
+							</span>
+							<span className="font-semibold hidden md:block">
+								Groups
+							</span>
+						</Link>
 
-							<Link
-								to="/"
-								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
+						<Link
+							to="/"
+							className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
+						>
+							<span className="material-symbols-outlined text-yellow-400 p-2 sm:p-0">
+								sports
+							</span>
+							<span className="font-semibold hidden md:block">
+								Coaches
+							</span>
+						</Link>
+						<Link
+							to=""
+							className="mx-10 inline-flex gap-2 items-center justify-center"
+						>
+							<button
+								onClick={handleSignout}
+								className="hidden md:flex gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 px-2 py-2  font-semibold text-white items-center justify-center"
 							>
-								<span className="material-symbols-outlined text-yellow-400">
-									group
+								<span className="material-symbols-outlined text-white hover:text-yellow-500">
+									logout
 								</span>
-								<span className="font-semibold hidden md:block">
-									Groups
-								</span>
-							</Link>
-
-							<Link
-								to="/"
-								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
-							>
-								<span className="material-symbols-outlined text-yellow-400">
-									sports
-								</span>
-								<span className="font-semibold hidden md:block">
-									Coaches
-								</span>
-							</Link>
-						</nav>
-					</div>
+								Sign Out
+							</button>
+						</Link>
+					</nav>
 				</div>
 				{/* Content */}
 				<div className="col-span-5 md:flex-col py-5 bg-slate-600/40 justify-between">
 					<div className="flex-1 px-2 sm:px-0 mx-10">
 						<div className="flex justify-between items-center">
-							<h3 className="text-3xl font-bold text-gray-300">
+							<h3 className="text-3xl font-bold text-gray-900 uppercase ml-10">
 								Groups
 							</h3>
 						</div>
