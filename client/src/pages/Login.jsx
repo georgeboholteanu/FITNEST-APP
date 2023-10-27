@@ -149,9 +149,8 @@ const Login = () => {
 							type="submit"
 							className="block w-full rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-3 text-sm font-medium text-white"
 						>
-							<Link to="/" className="underline">
-								Sign In
-							</Link>
+							{" "}
+							Sign In
 						</button>
 						<p className="text-center text-sm text-gray-200 ">
 							No account?{" "}

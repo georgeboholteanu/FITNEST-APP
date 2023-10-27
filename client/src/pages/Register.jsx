@@ -180,9 +180,7 @@ const Register = () => {
 						type="submit"
 						className="block w-full rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-3 text-sm font-medium text-white"
 					>
-						<Link className="" to="/">
-							Register
-						</Link>
+						Register
 					</button>
 				</form>
 			</div>
