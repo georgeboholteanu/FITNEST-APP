@@ -4,18 +4,18 @@ const Contact = () => {
 	return (
 		<div className="relative">
 			{/* image */}
-			<div className="min-w-full object-cover">
+			<div className="object-cover">
 				<img
 					className=""
 					src="/assets/images/geert-pieters-AfgJpWQH4lw-unsplash.jpg"
 				/>
 			</div>
 			{/* header */}
-			<div className="md:absolute md:top-1/2 px-5 md:px-10 transform md:-translate-y-1/2 text-left text-white bg-gray-400 md:bg-transparent">
-				<div className="flex flex-col md:flex-row">
+			<div className="md:absolute md:top-1/3 mx-auto px-5 sm:px-10 md:px-20 transform md:-translate-y-1/3 text-left text-white bg-gray-400 md:bg-transparent">
+				<div className="grid grid-col-1 md:grid-cols-2 grid-flow-row md:gap-x-10 lg:gap-x-20 gap-y-5 py-10">
 					{/* hero */}
-					<div className="px-5 md:px-10 py-5 md:pt-40 pt-10 md:pr-60">
-						<div className="glass px-5 md:px-10 py-5 md:py-10 rounded-lg shadow-lg">
+					<div className="flex items-center w-full">
+						<div className="glass px-5 md:px-10 py-5 md:py-10 rounded-2xl shadow-lg bg-slate-500/40 ">
 							<h1 className="text-3xl md:text-5xl font-bold capitalize text-white">
 								Get in Touch for a Fit Tomorrow!
 							</h1>
@@ -24,12 +24,12 @@ const Contact = () => {
 								Ready to kickstart your fitness adventure?
 							</p>
 							<p className=" font-semibold text-yellow-400 ">
-								We can't wait to hear from you!
+								We can&apos;t wait to hear from you!
 							</p>
 						</div>
 					</div>
 					{/* form */}
-					<div className="px-5 md:px-10 md:w-[1000px] py-10 md:pr-40">
+					<div className="items-center">
 						<h1 className="text-2xl font-bold md:text-3xl text-yellow-400 text-center">
 							Lets talk about everything!
 						</h1>
@@ -42,7 +42,7 @@ const Contact = () => {
 								<input
 									type="text"
 									placeholder="John Doe"
-									className="block w-full px-5 py-3 mt-2 text-gray-700 bg-gray-200 border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+									className="block w-full px-5 py-3 mt-2 text-gray-900 bg-gray-200/30 border border-gray-200 rounded-md dark:bg-gray-900/50 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 								/>
 							</div>
 
@@ -53,7 +53,7 @@ const Contact = () => {
 								<input
 									type="email"
 									placeholder="johndoe@example.com"
-									className="block w-full px-5 py-3 mt-2 text-gray-700  bg-gray-200 border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+									className="block w-full px-5 py-3 mt-2 text-gray-900 bg-gray-200/30 border border-gray-200 rounded-md dark:bg-gray-900/50 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 								/>
 							</div>
 
@@ -62,7 +62,7 @@ const Contact = () => {
 									Message
 								</label>
 								<textarea
-									className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-500 bg-gray-200 border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+									className="block w-full px-5 h-32 py-3 mt-2 text-gray-900 bg-gray-200/30 border border-gray-200 rounded-md dark:bg-gray-900/50 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 									placeholder="Message"
 								></textarea>
 							</div>

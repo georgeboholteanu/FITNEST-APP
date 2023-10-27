@@ -13,9 +13,9 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className="px-5 border-b-2 border-gray-300 md:px-20 py-4 flex md:items-center justify-between md:justify-center md:space-x-96 flex-shrink-0">
+			<nav className="px-5 border-b-2 border-gray-300 md:px-20 py-4 flex md:items-center justify-between mx-auto flex-shrink-0">
 				{/* logo */}
-				<div className="block">
+				<div className="inline-block">
 					<Link to="/" className="logo inline-flex text-4xl">
 						<h1 className="text-yellow-500">fit</h1>
 						<h1 className="text-black">NEST</h1>
