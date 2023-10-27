@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { FaDumbbell, FaMusic, FaMagic, FaRegHeart } from "react-icons/fa";
 
 const Class = ({ title, description, imageSrc, imageAlt }) => {
 	return (
@@ -24,10 +23,10 @@ const Class = ({ title, description, imageSrc, imageAlt }) => {
 
 				{/* icons */}
 				<div className="mt-6 mb-2 group inline-flex flex-wrap items-center gap-3">
-					<FaDumbbell className="mx-4 text-xl text-pink-500"/>
-					<FaMusic className="mx-4 text-xl text-pink-500"/>
-					<FaMagic className="mx-4 text-xl text-pink-500"/>
-					<FaRegHeart className="mx-4 text-xl text-pink-500"/>					
+					<span className="material-symbols-outlined text-pink-500 mx-3 text-3xl">exercise</span>
+					<span className="material-symbols-outlined text-pink-500 mx-3 text-3xl">library_music</span>
+					<span className="material-symbols-outlined text-pink-500 mx-3 text-3xl">heart_plus</span>
+					<span className="material-symbols-outlined text-pink-500 mx-3 text-3xl">alarm_on</span>
 				</div>
 			</div>
 

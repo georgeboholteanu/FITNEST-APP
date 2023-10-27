@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import { BiHomeAlt2 } from "react-icons/bi";
-import { HiUserGroup } from "react-icons/hi";
-import { FaBuffer, FaAlgolia, FaAngleDoubleRight } from "react-icons/fa";
 
 const Dashboard = () => {
 	// const scrollToElement = (elementID) => {
@@ -23,7 +20,9 @@ const Dashboard = () => {
 							dashboard
 						</h2>
 
-						<FaBuffer className="flex md:hidden text-gray-400 my-3 text-4xl" />
+						<span className="material-symbols-outlined text-gray-300 text-3xl">
+							dashboard
+						</span>
 					</div>
 					<div className="justify-start mx-5 align-middle">
 						{/* nav links */}
@@ -32,9 +31,9 @@ const Dashboard = () => {
 								to="/"
 								className="justify-center -mb-2 text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
 							>
-								<div className="text-2xl">
-									<BiHomeAlt2 className="text-yellow-400" />
-								</div>
+								<span className="material-symbols-outlined text-yellow-400">
+									home
+								</span>
 								<span className="font-semibold hidden md:block">
 									Home
 								</span>
@@ -44,10 +43,9 @@ const Dashboard = () => {
 								to="/"
 								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
 							>
-								<div className="text-2xl">
-									<HiUserGroup className="text-yellow-400" />
-								</div>
-
+								<span className="material-symbols-outlined text-yellow-400">
+									diversity_3
+								</span>
 								<span className="font-semibold hidden md:block">
 									Classes
 								</span>
@@ -55,11 +53,11 @@ const Dashboard = () => {
 
 							<Link
 								to="/"
-								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg bg-gray-800 hover:text-white smooth-hover"
+								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
 							>
-								<div className="text-2xl">
-									<FaAngleDoubleRight className="text-yellow-400" />
-								</div>
+								<span className="material-symbols-outlined text-yellow-400">
+									group
+								</span>
 								<span className="font-semibold hidden md:block">
 									Groups
 								</span>
@@ -69,9 +67,9 @@ const Dashboard = () => {
 								to="/"
 								className="justify-center text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
 							>
-								<div className="text-2xl">
-									<FaAlgolia className="text-yellow-400" />
-								</div>
+								<span className="material-symbols-outlined text-yellow-400">
+									sports
+								</span>
 								<span className="font-semibold hidden md:block">
 									Coaches
 								</span>

@@ -13,13 +13,13 @@
 
 ## Description
 
-- The app uses **React** routing to navigate between different pages of the app.
-- An **Express** server has been set up for user authentification and registration.
-- **Sequelize** library has been used as an ORM (Object-Relational-Mapper) for **Node.js** in order to interact with MySQL database.
-- A database can be configured for testing locally using **MySQL Workbench**.
-- The database is being accessed from a mySQL server configured using [Clever Cloud Console](https://console.clever-cloud.com/).
-- After a successful login the user will be redirected to the user dashboard page.
-- Following registration user paswords are **hashed** before being stored in the database.
+-   The app uses **React** routing to navigate between different pages of the app.
+-   An **Express** server has been set up for user authentification and registration.
+-   **Sequelize** library has been used as an ORM (Object-Relational-Mapper) for **Node.js** in order to interact with MySQL database.
+-   A database can be configured for testing locally using **MySQL Workbench**.
+-   The database is being accessed from a mySQL server configured using [Clever Cloud Console](https://console.clever-cloud.com/).
+-   After a successful login the user will be redirected to the user dashboard page.
+-   Following registration user paswords are **hashed** before being stored in the database.
 
 ### **Deployed on VERCEL** : [fitNEST-app](https://fitnest.vercel.app/)
 
@@ -27,6 +27,7 @@
 <img style="padding: 4px" src="./client/src/assets/appMobilePreview.png" height="420">
 <img style="padding: 4px" src="./client/src/assets/appDesktopPreview.jpg" width="785">  
 </div>
+
 ## Installation
 
 ```bash
@@ -50,7 +51,7 @@ npm run client
 
 ## Requirements
 
--   ### MySQL Local Server - Testing
+-   ### MySQL Local Server - Development
 
     -   [MySQL](https://dev.mysql.com/downloads/installer/) server installed and running locally.
 
