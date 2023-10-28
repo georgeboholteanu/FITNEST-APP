@@ -15,7 +15,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				"/api/auth/login",
+				"fitnest-app.vercel.app/api/auth/login",
 				{
 					method: "POST",
 					headers: {
