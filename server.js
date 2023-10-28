@@ -8,13 +8,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 const host = process.env.HOST || "0.0.0.0";
 
-app.use(cors(
-	{
-		origin: ["fitnest.vercel.app"],
-		methods: ["POST", "GET"],
-		credentials: true
-	}
-));
+app.use(cors());
 app.use(bodyParser.json());
 
 // Define routes
