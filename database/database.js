@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 // Load environment variables from .env file
 dotenv.config();
 
-const db = new Sequelize(process.env.DB_DBNAME || 'gym', process.env.DB_USERNAME || 'root', process.env.DB_PASSWORD || sssqqqlll, {
-  host: process.env.DB_HOST || 'localhost',
+const db = new Sequelize(process.env.DB_DBNAM, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST,
   dialect: 'mysql',
 });
 
