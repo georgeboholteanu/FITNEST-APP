@@ -14,7 +14,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				"fitnest-app.vercel.app/api/users/register",
+				"/api/users/register",
 				{
 					method: "POST",
 					headers: {
