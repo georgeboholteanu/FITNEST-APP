@@ -6,7 +6,7 @@ import usersRoutes from "./routes/users.js";
 
 const app = express();
 const port = process.env.PORT || 8000;
-const host = process.env.HOST || "0.0.0.0";
+const host = process.env.HOST || "localhost";
 
 app.use(cors());
 app.use(bodyParser.json());
