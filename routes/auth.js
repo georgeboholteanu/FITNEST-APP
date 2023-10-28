@@ -2,9 +2,13 @@ import express from "express";
 import UserX from "../models/UserX.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt"
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
 
 const router = express.Router();
-const JWT_SECRET_KEY = "abckey";
+const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
 // Function to generate a JWT token
 function createToken(user) {
