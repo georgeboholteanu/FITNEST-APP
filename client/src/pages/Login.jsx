@@ -15,7 +15,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				"/api/auth/login",
+				"/api/login",
 				{
 					method: "POST",
 					headers: {

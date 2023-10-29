@@ -8,7 +8,7 @@ export default defineConfig({
 		port: 3000,
 		proxy: {
 			"/api": {
-				target: "fitnest-app.vercel.app",
+				target: "http://localhost:8000",
 				changeOrigin: true,
 			},
 		},
