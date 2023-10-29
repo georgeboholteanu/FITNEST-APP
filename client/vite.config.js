@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
@@ -8,7 +9,7 @@ export default defineConfig({
 		port: 3000,
 		proxy: {
 			"/api": {
-				target: "fitnest-app.vercel.app",
+				target: 'fitnest-app.vercel.app',
 				changeOrigin: true,
 			},
 		},
