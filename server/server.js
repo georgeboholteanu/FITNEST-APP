@@ -15,24 +15,7 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
 
-const prodOrigins = [process.env.ORIGIN_1];
-const devOrigin = ["http://localhost:3000/"];
-const allowedOrigins = prodOrigins.concat(devOrigin);
-app.use(
-	cors({
-		origin: (origin, callback) => {
-			if (allowedOrigins.includes(origin)) {
-				console.log(origin, allowedOrigins);
-				callback(null, true);
-			} else {
-				callback(new Error("Not allowed by CORS"));
-			}
-		},
-		credentials: true,
-		methods: ["GET", "POST", "PUT", "DELETE"],
-	})
-);
-
+app.use(cors())
 // Middleware to extract basic authentication credentials
 const requireBasicAuth = (req, res, next) => {
 	const credentials = basicAuth(req);
