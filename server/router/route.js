@@ -1,29 +1,10 @@
 import { Router } from "express";
-import UserSchema from "../models/UserModel.js";
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
-import dotenv from "dotenv";
+import "dotenv/config";
 
 /** import all controllers */
-import * as controller from "../controllers/appController.js"
-
-/** Load environment variables from .env file */
-dotenv.config();
+import * as controller from "../controllers/appController.js";
 
 const router = Router();
-const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
-const BASIC_AUTH_USERNAME = process.env.BASIC_AUTH_USERNAME;
-const BASIC_AUTH_PASSWORD = process.env.BASIC_AUTH_PASSWORD;
-
-/** Generate a JWT token */
-function createToken(user) {
-	const payload = {
-		userId: user.user_id,
-		email: user.email,
-	};
-
-	return jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: "1h" });
-}
 
 /** POST Methods */
 router.post("/register", controller.register);
@@ -40,7 +21,6 @@ router.post("/login", controller.login);
 // /** PUT Methods */
 // router.put("updateuser", controller.updateuser);
 // router.put("resetPassword", controller.resetPassword);
-
 
 /** GET Methods */
 // router.get("/users", async (req, res) => {

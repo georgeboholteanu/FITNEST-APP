@@ -15,7 +15,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
 
 /** auth middleware */
-import { AuthorizeUser } from "./middleware/auth";
+// import { AuthorizeUser } from "./middleware/auth";
 
 function App() {
 	const Layout = () => {

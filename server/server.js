@@ -2,18 +2,37 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
-import connect from "./database/database.js"; 
+import connect from "./database/database.js";
 import router from "./router/route.js";
 import basicAuth from "basic-auth";
 
 /** Create an instance of Express */
 const app = express();
+const port = process.env.PORT || 8000;
 
 /** middlewares */
 app.use(express.json());
-app.use(cors());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
+
+const prodOrigins = [process.env.ORIGIN_1];
+const devOrigin = ["http://localhost:8000/"];
+const allowedOrigins =
+	process.env.NODE_ENV === "production" ? prodOrigins : devOrigin;
+app.use(
+	cors({
+		origin: (origin, callback) => {
+			if (allowedOrigins.includes(origin)) {
+				console.log(origin, allowedOrigins);
+				callback(null, true);
+			} else {
+				callback(new Error("Not allowed by CORS"));
+			}
+		},
+		credentials: true,
+		methods: ["GET", "POST", "PUT", "DELETE"],
+	})
+);
 
 // Middleware to extract basic authentication credentials
 const requireBasicAuth = (req, res, next) => {
@@ -31,9 +50,6 @@ const requireBasicAuth = (req, res, next) => {
 	// If the credentials match, continue to the next middleware
 	next();
 };
-
-const port = process.env.PORT;
-const host = process.env.HOST;
 
 app.use(bodyParser.json());
 
@@ -56,7 +72,9 @@ connect() // Call the connect function to establish database
 				console.error("Error starting the server:", err);
 			} else {
 				// console.log("Current Working Directory:", process.cwd());
-				console.log(`Server running on http://${host}:${port}`);
+				console.log(
+					`Server running on http://localhost:${port}`
+				);
 			}
 		});
 	})
