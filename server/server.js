@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
 
-const prodOrigins = [process.env.ORIGIN_1];
-const devOrigin = ["http://localhost:8000/"];
+const prodOrigins = process.env.ORIGIN_1;
+const devOrigin = "http://localhost:3000/";
 const allowedOrigins =
 	process.env.NODE_ENV === "production" ? prodOrigins : devOrigin;
 app.use(
@@ -72,9 +72,7 @@ connect() // Call the connect function to establish database
 				console.error("Error starting the server:", err);
 			} else {
 				// console.log("Current Working Directory:", process.cwd());
-				console.log(
-					`Server running on http://localhost:${port}`
-				);
+				console.log(`Server running on http://localhost:${port}`);
 			}
 		});
 	})
