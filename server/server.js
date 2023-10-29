@@ -15,10 +15,9 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
 
-const prodOrigins = process.env.ORIGIN_1;
-const devOrigin = "http://localhost:3000/";
-const allowedOrigins =
-	process.env.NODE_ENV === "production" ? prodOrigins : devOrigin;
+const prodOrigins = [process.env.ORIGIN_1];
+const devOrigin = ["http://localhost:3000/"];
+const allowedOrigins = prodOrigins.concat(devOrigin);
 app.use(
 	cors({
 		origin: (origin, callback) => {
