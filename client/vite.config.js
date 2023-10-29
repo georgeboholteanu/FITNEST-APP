@@ -9,7 +9,7 @@ export default defineConfig({
 		proxy: {
 			"/api": {
 				// target: 'http://localhost:8000',
-				target: 'http://fitnest-app.vercel.app',
+				target: 'https://fitnest-server.onrender.com',
 				changeOrigin: true,
 			},
 		},
