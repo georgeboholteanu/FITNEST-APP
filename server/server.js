@@ -55,7 +55,7 @@ connect() // Call the connect function to establish database
 			if (err) {
 				console.error("Error starting the server:", err);
 			} else {
-				console.log("Current Working Directory:", process.cwd());
+				// console.log("Current Working Directory:", process.cwd());
 				console.log(`Server running on http://${host}:${port}`);
 			}
 		});

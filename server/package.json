@@ -1,15 +1,13 @@
 {
-  "name": "gym-classes",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

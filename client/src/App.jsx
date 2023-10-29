@@ -1,18 +1,21 @@
-// LIBRARIES
+/**  LIBRARIES */
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./styles/global.css";
-// PAGES
+/**  PAGES */
 import Home from "./pages/Home";
 import Facilities from "./pages/Facilities";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-// COMPONENTS
+/**  COMPONENTS */
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
+
+/** auth middleware */
+import { AuthorizeUser } from "./middleware/auth";
 
 function App() {
 	const Layout = () => {

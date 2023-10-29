@@ -122,11 +122,9 @@ export async function registerEmail(req, res) {
  * }
  */
 export async function login(req, res) {
-	try {
-		const { email, password } = req.body;
-		const UserModel = await UserSchema(); // Call the function to get the model
-		const user = await UserModel.findOne({ where: { email } });
+	const { email, password } = req.body;
 
+	try {
 		// Function to generate a JWT token
 		const createToken = (user) => {
 			const payload = {
@@ -134,8 +132,13 @@ export async function login(req, res) {
 				email: user.email,
 			};
 
-			return jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: "1h" });
+			return jwt.sign(payload, process.env.JWT_SECRET_KEY, {
+				expiresIn: "1h",
+			});
 		};
+
+		const UserModel = await UserSchema(); // Call the function to get the model
+		const user = await UserModel.findOne({ where: { email } });
 
 		if (!user) {
 			return res
@@ -162,8 +165,7 @@ export async function login(req, res) {
 			token: token,
 		});
 	} catch (error) {
-		console.error(error);
-		res.status(500).json({ message: "Internal server error" });
+		res.status(500).json(error);
 	}
 }
 
