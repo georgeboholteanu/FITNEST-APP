@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
+vercel.json
 .env
-ss/
 # Editor directories and files
 *.txt
 # .vscode/*
