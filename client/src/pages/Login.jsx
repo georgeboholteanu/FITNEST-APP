@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const Login = () => {
-	const [email, setEmail] = useState("alan@gmail.com");
-	const [password, setPassword] = useState("alan");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	const [loginResult, setLoginResult] = useState(null);
 	const [user, setUser] = useState(null);
 	const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -16,7 +16,7 @@ const Login = () => {
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(`${API_BASE_URL}/api/login`, {
+			const response = await fetch(`https://fitnest-server.onrender.com/api/login`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
