@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const Register = () => {
-	const [first_name, setfirst_name] = useState("");
-	const [last_name, setlast_name] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+	const [first_name, setfirst_name] = useState("alan");
+	const [last_name, setlast_name] = useState("one");
+	const [email, setEmail] = useState("alan2@gmail.com");
+	const [password, setPassword] = useState("alan");
 	const [registerResult, setRegisterResult] = useState("");
 
 	const handleRegister = async (e) => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				"/api/register",
+				`${API_BASE_URL}/api/register`,
 				{
 					method: "POST",
 					headers: {

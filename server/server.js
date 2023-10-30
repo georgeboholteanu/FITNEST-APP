@@ -2,9 +2,12 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
-import connect from "./database/database.js";
+import connect from "./database/connect.js";
 import router from "./router/route.js";
 import basicAuth from "basic-auth";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 /** Create an instance of Express */
 const app = express();
@@ -14,8 +17,9 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
+app.use(bodyParser.json());
+app.use(cors());
 
-app.use(cors())
 // Middleware to extract basic authentication credentials
 const requireBasicAuth = (req, res, next) => {
 	const credentials = basicAuth(req);
@@ -32,13 +36,6 @@ const requireBasicAuth = (req, res, next) => {
 	// If the credentials match, continue to the next middleware
 	next();
 };
-
-app.use(bodyParser.json());
-
-/** HTTP GET Request */
-app.get("/", (req, res) => {
-	res.status(201).json("Home GET Request");
-});
 
 /** API routes */
 // Apply basic authentication middleware for the /api/users endpoint and sub-routes

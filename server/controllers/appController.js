@@ -1,7 +1,9 @@
 import UserSchema from "../models/UserModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import "dotenv/config";
+import dotenv from "dotenv"
+
+dotenv.config()
 
 /** POST: http://localhost:8000/api/register
  * @param : {
@@ -32,7 +34,7 @@ export async function register(req, res) {
 				first_name,
 				last_name,
 				email,
-				password: hashedPassword,
+				password:hashedPassword,
 			});
 			return res.status(201).json({
 				message: "User registered successfully",
@@ -49,7 +51,7 @@ export async function register(req, res) {
 			}
 		}
 
-		// // check for existing email
+		// check for existing email
 		// const existEmail = new Promise((resolve, reject) => {
 		// 	UserModel.findOne(where: { email }, function (err, email) {
 		// 		if (err) reject(new Error(err));
@@ -120,51 +122,77 @@ export async function registerEmail(req, res) {
  */
 export async function login(req, res) {
 	const { email, password } = req.body;
-	res.json({ message : `${email} | ${password} | from the server`})
-// 	try {
-// 		// Function to generate a JWT token
-// 		const createToken = (user) => {
-// 			const payload = {
-// 				userId: user.id,
-// 				email: user.email,
-// 			};
 
-// 			return jwt.sign(payload, process.env.JWT_SECRET_KEY, {
-// 				expiresIn: "1h",
-// 			});
-// 		};
+	try {
+		// Function to generate a JWT token
+		const createToken = (user) => {
+			const payload = {
+				userId: user.user_id,
+				email: user.email,
+			};
 
-// 		const UserModel = await UserSchema(); // Call the function to get the model
-// 		const user = await UserModel.findOne({ where: { email } });
+			return jwt.sign(payload, process.env.JWT_SECRET_KEY, {
+				expiresIn: "1h",
+			});
+		};
 
-// 		if (!user) {
-// 			return res
-// 				.status(401)
-// 				.json({ message: "Authentication failed. User not found." });
-// 		}
+		const UserModel = await UserSchema(); // Call the function to get the model
+		const user = await UserModel.findOne({ where: { email } });
 
-// 		// Use bcrypt to compare the password
-// 		const isPasswordValid = await bcrypt.compare(password, user.password);
+		if (!user) {
+			return res
+				.status(401)
+				.json({ message: "Authentication failed. User not found." });
+		}
 
-// 		if (!isPasswordValid) {
-// 			return res.status(401).json({
-// 				message: "Authentication failed. Incorrect password.",
-// 			});
-// 		}
+		// Use bcrypt to compare the password
+		const isPasswordValid = await bcrypt.compare(password, user.password);
 
-// 		// If the user and password are valid, create a token
-// 		const token = createToken(user);
+		if (!isPasswordValid) {
+			return res.status(401).json({
+				message: "Authentication failed. Incorrect password.",
+			});
+		}
 
-// 		// Respond with a success message and token
-// 		res.status(200).json({
-// 			message: "Authentication successful",
-// 			user: user,
-// 			token: token,
-// 		});
-// 	} catch (error) {
-// 		res.status(500).json(error);
-// 	}
+		// If the user and password are valid, create a token
+		const token = createToken(user);
+
+		// Respond with a success message and token
+		res.status(200).json({
+			message: "Authentication successful",
+			user: user,
+			token: token,
+		});
+	} catch (error) {
+		res.status(500).json(error);
+	}
 }
+
+
+/** GET: http://localhost:8000/api/testServer */
+export async function testServer(req, res) {
+	res.status(200).json({message:'Hello from the server'})
+}
+
+
+/** GET: http://localhost:8000/ */
+export async function serverWelcome(req, res) {
+	res.status(201).json("Home GET Request");
+}
+
+
+/** GET: http://localhost:8000/api/users */
+export async function getUsers(req, res) {
+	try {
+		const UserModel = await UserSchema();
+		const users = await UserModel.findAll();
+		res.status(200).json(users);
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ message: "Internal server error" });
+	}
+}
+
 
 /** GET: http://localhost:8000/api/generateOTP */
 export async function generateOTP(req, res) {

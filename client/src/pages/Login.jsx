@@ -3,9 +3,11 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const Login = () => {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+	const [email, setEmail] = useState("alan@gmail.com");
+	const [password, setPassword] = useState("alan");
 	const [loginResult, setLoginResult] = useState(null);
 	const [user, setUser] = useState(null);
 	const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -14,28 +16,27 @@ const Login = () => {
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(
-				"/api/login",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({ email, password }),
-				}
-			);
+			const response = await fetch(`${API_BASE_URL}/api/login`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email, password }),
+			});
 
 			if (response.ok) {
 				const result = await response.json();
 				setLoginResult(result);
+				toast.success(result.message);
+
+				console.log(result);
 
 				// Redirect to the Dashboard page if login is successful
-				setIsLoggedIn(!isLoggedIn);
+				// setIsLoggedIn(!isLoggedIn);
 				navigate("/dashboard"); // Redirect to the Dashboard route
 
 				// Store the user information in your application state
 				setUser(result.user);
-				toast.success(result.message); // for testing purposes
 			} else if (response.status === 401) {
 				// Handle 401 (Unauthorized) error
 				const errorData = await response.json();
@@ -68,7 +69,6 @@ const Login = () => {
 					<form
 						action="/login"
 						id="loginForm"
-						autoComplete="on"
 						onSubmit={handleLogin}
 						className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
 					>
@@ -149,7 +149,6 @@ const Login = () => {
 						<button
 							type="submit"
 							className="block w-full rounded-lg bg-blue-600 hover:bg-blue-700 px-5 py-3 text-sm font-medium text-white"
-							onClick={handleLogin}
 						>
 							Sign In
 						</button>

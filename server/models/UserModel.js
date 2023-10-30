@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import connect from "../database/database.js";
+import connect from "../database/connect.js";
 
 const UserSchema = async () => {
 	const db = await connect();
