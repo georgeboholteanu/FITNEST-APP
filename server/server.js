@@ -18,7 +18,13 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(
+	{
+		origin: ["fitnest-api.vercel.app"],
+		methods: ["POST", "GET"],
+		credentials: true
+	}
+));
 
 // Middleware to extract basic authentication credentials
 const requireBasicAuth = (req, res, next) => {
@@ -44,7 +50,7 @@ app.use("/api", router);
 
 /** Start server */
 connect() // Call the connect function to establish database
-	.then((db) => {
+	.then(() => {
 		// Start the server only when the database is connected
 		app.listen(port, (err) => {
 			if (err) {
