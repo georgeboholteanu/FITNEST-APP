@@ -20,7 +20,7 @@ app.disable("x-powered-by"); // Less hackers know about current stack
 app.use(bodyParser.json());
 app.use(cors(
 	{
-		origin: ["http://localhost:5173"],
+		origin: [process.env.VITE_BASE_URL],
 		methods: ["POST", "GET"],
 		credentials: true
 	}
