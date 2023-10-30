@@ -3,7 +3,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const SERVER_BASE_URL = import.meta.env.SERVER_BASE_URL;
+const SERVER_BASE_URL = import.meta.env.VITE_PROD_SERVER_BASE_URL;
 
 const Login = () => {
 	const [email, setEmail] = useState("");
