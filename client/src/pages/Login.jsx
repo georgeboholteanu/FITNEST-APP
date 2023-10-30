@@ -3,7 +3,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const BASE_URL = import.meta.env.SERVER_BASE_URL;
+const SERVER_BASE_URL = import.meta.env.SERVER_BASE_URL;
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -16,7 +16,7 @@ const Login = () => {
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(`${BASE_URL}/api/login`, {
+			const response = await fetch(`/api/login`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

@@ -19,11 +19,11 @@ app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
 app.use(bodyParser.json());
 app.use(cors(
-	{
-		origin: [process.env.VITE_BASE_URL],
-		methods: ["POST", "GET"],
-		credentials: true
-	}
+	// {
+	// 	origin: [process.env.VITE_BASE_URL],
+	// 	methods: ["POST", "GET"],
+	// 	credentials: true
+	// }
 ));
 
 // Middleware to extract basic authentication credentials

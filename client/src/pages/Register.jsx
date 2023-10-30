@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const BASE_URL = import.meta.env.SERVER_BASE_URL;
+const SERVER_BASE_URL = import.meta.env.SERVER_BASE_URL;
 
 const Register = () => {
 	const [first_name, setfirst_name] = useState("");
@@ -16,7 +16,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				`${BASE_URL}/api/register`,
+				`/api/register`,
 				{
 					method: "POST",
 					headers: {
