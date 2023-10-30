@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import dotenv from "dotenv"
 
-const SERVER_BASE_URL = import.meta.env.SERVER_BASE_URL;
+dotenv.config()
 
 const Register = () => {
 	const [first_name, setfirst_name] = useState("");
@@ -16,7 +17,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				`${SERVER_BASE_URL}/api/register`,
+				`${process.env.SERVER_BASE_URL}/api/register`,
 				{
 					method: "POST",
 					headers: {
