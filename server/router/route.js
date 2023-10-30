@@ -10,7 +10,7 @@ const router = Router();
 router.post("/register", controller.register);
 router.post("/registerEmail", controller.registerEmail);
 router.post("/authentificate", (req, res) => res.end());
-router.post("/login", controller.login);
+router.post("/message", controller.login);
 
 /** GET Methods */
 // router.get("/user/:username", controller.getUser);
