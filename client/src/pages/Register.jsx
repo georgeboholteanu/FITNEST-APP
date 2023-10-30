@@ -16,7 +16,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				`/api/register`,
+				`${SERVER_BASE_URL}/api/register`,
 				{
 					method: "POST",
 					headers: {
