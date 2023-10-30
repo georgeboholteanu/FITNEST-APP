@@ -20,7 +20,7 @@ app.disable("x-powered-by"); // Less hackers know about current stack
 app.use(bodyParser.json());
 app.use(cors(
 	{
-		origin: ["fitnest-api.vercel.app"],
+		origin: ["fitnest.vercel.app"],
 		methods: ["POST", "GET"],
 		credentials: true
 	}
