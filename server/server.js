@@ -18,13 +18,7 @@ app.use(express.json());
 app.use(morgan("tiny"));
 app.disable("x-powered-by"); // Less hackers know about current stack
 app.use(bodyParser.json());
-app.use(cors(
-	{
-		origin: [process.env.CLIENT_BASE_URL],
-		methods: ["POST", "GET"],
-		credentials: true
-	}
-));
+app.use(cors());
 
 // Middleware to extract basic authentication credentials
 const requireBasicAuth = (req, res, next) => {
