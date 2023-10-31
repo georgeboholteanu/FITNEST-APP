@@ -3,9 +3,10 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const SERVER_BASE_URL = import.meta.env.VITE_PROD_SERVER_BASE_URL;
 
 const Login = () => {
+	const SERVER_BASE_URL = import.meta.env.VITE_PROD_SERVER_BASE_URL;
+	
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [loginResult, setLoginResult] = useState(null);
@@ -16,7 +17,7 @@ const Login = () => {
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(`https://fitnest-server.onrender.com/api/login`, {
+			const response = await fetch(`${SERVER_BASE_URL}/api/login`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -32,7 +33,7 @@ const Login = () => {
 				console.log(result);
 
 				// Redirect to the Dashboard page if login is successful
-				// setIsLoggedIn(!isLoggedIn);
+				setIsLoggedIn(!isLoggedIn);
 				navigate("/dashboard"); // Redirect to the Dashboard route
 
 				// Store the user information in your application state

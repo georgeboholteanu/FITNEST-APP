@@ -6,7 +6,6 @@ const Dashboard = () => {
 	const navigate = useNavigate();
 
 	const handleSignout = () => {
-
 		// Redirect to the login page after logout.
 		navigate("/login");
 
@@ -35,7 +34,7 @@ const Dashboard = () => {
 							to="/"
 							className="justify-center -mb-2 text-white/50 md:p-4 my-3 inline-flex space-x-4 rounded-lg hover:bg-gray-800 hover:text-white smooth-hover"
 						>
-							<span className="material-symbols-outlined text-yellow-400 p-2 sm:p-0 p-2 sm:p-0">
+							<span className="material-symbols-outlined text-yellow-400 p-2 sm:p-0">
 								home
 							</span>
 							<span className="font-semibold hidden md:block">
@@ -82,6 +81,9 @@ const Dashboard = () => {
 							to=""
 							className="mx-10 inline-flex gap-2 items-center justify-center"
 						>
+							<span onClick={handleSignout} className="flex md:hidden material-symbols-outlined text-blue-500 hover:text-yellow-500">
+								logout
+							</span>
 							<button
 								onClick={handleSignout}
 								className="hidden md:flex gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 px-2 py-2  font-semibold text-white items-center justify-center"
