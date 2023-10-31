@@ -16,16 +16,9 @@ router.post("/login", controller.login);
 
 
 /** GET Methods */
-// router.get("/user/:username", controller.getUser);
-// router.get("/generateOTP", controller.generateOTP);
-// router.get("/verifyOTP", controller.verifyOTP);
-// router.get("/createResetSession", controller.createResetSession);
 router.get("/testServer", controller.testServer);
 router.get("/users", controller.getUsers);
 router.get("/", controller.serverWelcome);
 
-// /** PUT Methods */
-// router.put("updateuser", controller.updateuser);
-// router.put("resetPassword", controller.resetPassword);
 
 export default router;
