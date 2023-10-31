@@ -1,0 +1,21 @@
+{
+  "name": "fitnest-app",
+  "version": "1.0.0",
+  "description": "# Node Sequelize Authentication App ",
+  "main": "server.js",
+  "scripts": {
+    "build": "cd server && npm install && cd ../client && npm install && npm run build",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgeboholteanu/FITNEST-APP.git"
+  },
+  "author": "George Boholteanu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/georgeboholteanu/FITNEST-APP/issues"
+  },
+  "homepage": "https://github.com/georgeboholteanu/FITNEST-APP#readme"
+}
