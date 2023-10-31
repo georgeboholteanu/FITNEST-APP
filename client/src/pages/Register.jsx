@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const SERVER_BASE_URL = import.meta.env.VITE_PROD_SERVER_BASE_URL;
-
 const Register = () => {
+	const SERVER_BASE_URL = import.meta.env.VITE_PROD_SERVER_BASE_URL;
+
 	const [first_name, setfirst_name] = useState("");
 	const [last_name, setlast_name] = useState("");
 	const [email, setEmail] = useState("");
